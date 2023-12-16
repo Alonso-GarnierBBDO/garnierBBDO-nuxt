@@ -1,0 +1,215 @@
+nav {
+
+    background-color: transparent;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    backdrop-filter: blur(0px);
+    // animation: header_view auto linear both;
+    // animation-timeline: scroll(root block);
+    // animation-range: 0px 150px;
+    
+
+    // @keyframes header_view {
+    //     from{
+    //         background-color: transparent;
+    //         // backdrop-filter: blur(0px);
+    //     }
+
+    //     to{
+    //         background-color: $color-cuarto-transparent;
+    //         // backdrop-filter: blur(2px);
+    //     }
+
+    // }
+
+    @include bp(mobileBIG){
+        padding: 20px 40px;
+    }
+
+    .menu{
+        color: $color-cuarto;
+        font-size: rem(35px);
+    }
+
+    .bbdo{
+
+        transform: translate(31%,50%) scale(0);
+        fill: $color-principal;
+
+        @include keyframes(bbdoAnimation){
+
+            0%{
+                transform: translate(31%,50%) scale(0);
+            }
+
+            5%{
+                transform: translate(0%) scale(1);
+            }
+
+            50%{
+                transform: translate(0%) scale(1);
+            }
+
+            55%{
+                transform: translate(31%,50%) scale(0);
+            }
+
+            100%{
+                transform: translate(31%,50%) scale(0);
+            }
+
+        }
+
+        @include animate(bbdoAnimation, 20s, ease, infinite);
+
+    }
+
+    .rnier{
+
+        translate: -60px;
+
+        @include keyframes(rnierAnimation){
+
+            0%{
+                translate: -60px;
+            }
+
+            3%{
+                translate: 0px;
+            }
+
+            54%{
+                translate: 0px;
+            }
+
+            57%{
+                translate: -60px;
+            }
+
+            100%{
+                translate: -60px;
+            }
+
+        }
+
+        @include animate(rnierAnimation, 20s, ease, infinite);
+
+    }
+
+    input[type="checkbox"]{
+        display: none;
+    }
+
+    input[type="checkbox"]:checked ~ .items_menu{
+        left: 0%;
+    }
+
+    input[type="checkbox"]:checked ~ .capa_exit {
+
+        @include bp(mobileBIG){
+            display: block;
+        }
+    }
+
+    .capa_exit{
+
+        display: none;
+
+        @include bp(mobileBIG){
+            display: block;
+            position: fixed;
+            right: 0px;
+            top: 0px;
+            width: 100%;
+            background-color: $color-two-transparent;
+            backdrop-filter: blur(10px);
+            height: 100%;
+            display: none;
+        }
+
+    }
+
+    .items_menu{
+
+        background-color: $color-two;
+        position: fixed;
+        top: 0%;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .5s ease;
+
+        @include bp(mobileBIG){
+            width: 350px;
+            left: -350px;
+
+
+        }
+
+        div {
+
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .exit {
+
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                @include bp(mobileBIG){
+                    top: 20px;
+                    right: 20px;
+                }
+
+                .close{
+    
+                    color: $color-tres;
+                    font-size: rem(35px);
+    
+                }
+    
+            }
+    
+            ul {
+    
+                width: 100%;
+                list-style: none;
+    
+                li {
+    
+                    padding: 10px 15px;
+                    text-align: right;
+                    font-size: rem(50px);
+                    font-family: $font-regular;
+                    line-height: 35px;
+    
+                    @include bp(mobileBIG){
+                        text-align: left;
+                        font-size: rem(40px);
+                        padding: 5px 15px;
+                    }
+    
+                    a {
+                        color: $color-tres;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

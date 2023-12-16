@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "titulo" :  "CREATIVE + CRAFT",
+            "img" : "legos.svg",
+            "color" : "#4CABC6",
+            "colorTrasero" : "#D9D9D9   ",
+            "altura" : "400"
+        },
+        {
+            "titulo" :  "KAIJU PRODUCTION COMPANY: CONTENT + EVENTS",
+            "img" : "kaiju.svg",
+            "color" : "#CDF3FF",
+            "colorTrasero" : "#4CABC6",
+            "altura" : "600"
+        },
+        {
+            "titulo" :  "Strategy + RESEARCH + data",
+            "img" : "reina.svg",
+            "color" : "#4CABC6",
+            "colorTrasero" : "#4CABC6",
+            "altura" : "600"
+        },
+        {
+            "titulo" :  "BUSINESS INTELLIGENCE + RESEARCH + SOCIAL PLATFORMS",
+            "img" : "redes_sociales.svg",
+            "color" : "#4AB9D3",
+            "colorTrasero" : "#D9D9D9",
+            "altura" : "400"
+        },
+        {
+            "titulo" :  "IGNITE BRANDING & PACKAGING UNIT",
+            "img" : "fuegito.svg",
+            "color" : "#A7ECFC",
+            "colorTrasero" : "#D9D9D9",
+            "altura" : "500"
+        },
+        {
+            "titulo" :  "MEDIA DESIGN + AMPLIFICATION",
+            "img" : "chat.svg",
+            "color" : "#9ADFEF",
+            "colorTrasero" : "#4CABC6",
+            "altura" : "500"
+        }
+    ]
+}

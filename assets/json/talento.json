@@ -1,0 +1,202 @@
+{
+    "data": [
+        {
+            "titulo" :  "Ana Calvo",
+            "img" : "ana-calvo.webp",
+            "puesto" : "DIRECTORA CREATIVA",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Ana Isabel",
+            "img" : "ana-isabel.webp",
+            "puesto" : "OFFICE MANAGER",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Daniel Flores",
+            "img" : "daniel-flores.webp",
+            "puesto" : "DIRECTOR DE ARTE",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Dinnia Padilla",
+            "img" : "dinnia-padilla.webp",
+            "puesto" : "DIRECTORA DE ESTRATEGIA Y NEGOCIO",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Jorge Alvarado",
+            "img" : "jorge-alvarado.webp",
+            "puesto" : "DIRECTOR DE ARTE",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Katherine Fernández",
+            "img" : "katherine-fernandez.webp",
+            "puesto" : "DIRECTORA DE ARTE",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Paloma Herrera",
+            "img" : "Paloma Herrera.webp",
+            "puesto" : "DIRECTORA EJECUTIVA DE ESTRATEGIA Y NEGOCIO",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Susana Alpizar",
+            "img" : "Susana Alpizar.webp",
+            "puesto" : "SUB DIRECTORA DE ESTRATEGIA",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Allan Carmona",
+            "img" : "AllanCarmona.webp",
+            "puesto" : "DIRECTOR CREATIVO EJECUTIVO",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Ana Isabel",
+            "img" : "AnaIsabel.webp",
+            "puesto" : "DIRECTORA DE ARTE",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Daniela Valverde",
+            "img" : "DanielaValverde.webp",
+            "puesto" : "DIRECTORA DE ARTE",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Eduardo Hernández",
+            "img" : "EduardoHernandez.webp",
+            "puesto" : "DIRECTOR DE ARTE",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Jose Antillón",
+            "img" : "JoseAntillon.webp",
+            "puesto" : "DIRECTOR GENERAL CREATIVO",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Karla Molina",
+            "img" : "KarlaMolina.webp",
+            "puesto" : "DIRECTORA GENERAL DE ESTRATEGIA Y NEGOCIO",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Rodrigo Garnier",
+            "img" : "RodrigoGarnier.webp",
+            "puesto" : "VICEPRESIDENTE",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Sergio Chinchilla",
+            "img" : "SergioChinchilla.webp",
+            "puesto" : "DIRECTOR CREATIVO EJECUTIVO",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Ana Chinchilla",
+            "img" : "AnaChinchilla.webp",
+            "puesto" : "DIRECTORA EJECUTIVA DE ESTRATEGIA Y NEGOCIO",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Bryan Hidalgo",
+            "img" : "BryanHidalgo.webp",
+            "puesto" : "SUPERVISOR DE ARTE",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Daniel Salom",
+            "img" : "DanielSalom.webp",
+            "puesto" : "DIRECTOR DE ARTE",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Elizabeth Roldan ",
+            "img" : "ElizabethRoldan.webp",
+            "puesto" : "DIRECTORA DE MEDIOS",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Jose Herrera ",
+            "img" : "JoseHerrera.webp",
+            "puesto" : "DIRECTOR CREATIVO",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Laura Moreno",
+            "img" : "LauraMoreno.webp",
+            "puesto" : "DIRECTORA DE ARTE",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Rodrigo Lobo",
+            "img" : "RodrigoLobo.webp",
+            "puesto" : "DIRECTOR DE BRANDING",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Tomas Jankovich",
+            "img" : "null.webp",
+            "puesto" : "DIRECTOR DE PRODUCCIÓN",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Andrea Durman ",
+            "img" : "AndreaDurman.webp",
+            "puesto" : "DIRECTORA DE ESTRATEGIA Y NEGOCIO",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Carlos León",
+            "img" : "CarlosLeon.webp",
+            "puesto" : "DIRECTOR CREATIVO EJECUTIVO",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Diego Vásquez",
+            "img" : "DiegoVasquez.webp",
+            "puesto" : "DIRECTOR CREATIVO",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Jeremy Esquivel",
+            "img" : "JeremyEsquivel.webp",
+            "puesto" : "DIRECTOR DE MEDIOS",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Julio Alvarado",
+            "img" : "JulioAlvarado.webp",
+            "puesto" : "SUPERVISOR DE ARTE",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Mauricio Garnier",
+            "img" : "MauricioGarnier.webp",
+            "puesto" : "GERENTE GENERAL",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Shatsee Calvo",
+            "img" : "ShatseeCalvo.webp",
+            "puesto" : "SUPERVISORA DE NEGOCIOS",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Wady Calvo",
+            "img" : "WadyCalvo.webp",
+            "puesto" : "DIRECTOR DE OPERACIONES",
+            "linkedin" : "https://www.linkedin.com"
+        },
+        {
+            "titulo" :  "Yoshua León",
+            "img" : "YoshuaLeon.webp",
+            "puesto" : "DIRECTOR CREATIVO",
+            "linkedin" : "https://www.linkedin.com"
+        }
+    ]
+}

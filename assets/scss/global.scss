@@ -1,0 +1,17 @@
+@import './variables';
+@import './components/menu';
+
+*,
+html,
+body{
+    margin: 0px;    
+    padding: 0px;
+    scroll-behavior: smooth;
+    transition: .2s ease;
+}
+
+
+main{
+    height: 300vh;
+    background-color: blue;
+}
