@@ -1,0 +1,215 @@
+.slider{
+    
+    margin-top: 10px;
+
+    .swiper  {
+
+        @include bp(mobileBIG){
+            padding: 0px 30px;
+        }
+
+    }
+
+    .trabajo_slider{
+
+        .item{
+
+            padding: 0px 30px;
+            display: flex;
+
+            @include bp(mobileBIG){
+                padding: 0px;
+            }
+
+
+            a{
+                border-radius: 20px;
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                height: 75vh;
+                user-select: none;
+
+                @include bp(tablet){
+                    height: 550px;
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                &:hover{
+
+                    section{
+                        opacity: 1;
+                    }
+
+                }
+
+                section{
+                    background-color: $color-two;
+                    position: absolute;
+                    top: 0px;
+                    z-index: 1;
+                    width: calc(100% - 40px);
+                    height: calc(100% - 40px);
+                    left: 0px;
+                    padding: 20px;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-between;
+                    opacity: 0;
+
+                    h2{
+                        text-wrap: balance;
+                        font-size: rem(30px);
+                        font-family: $font-regular;
+                        line-height: 35px;
+                        color: $color-tres;
+                    }
+
+                    span{
+                        font-size: rem(20px);
+                        font-family: $font-regular;
+                        color: $color-principal;
+                    }
+
+                    .next{
+                        display: flex;
+                        justify-content: flex-end;
+
+                        button{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            border: 1px solid $color-tres;
+                            background-color: transparent;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            i{
+                                color: $color-tres;
+                                font-size: rem(18px);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.insaltable_link{
+    margin-top: 15px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: center;
+
+    @include bp(tabletMD){
+        justify-content: flex-end;
+    }
+
+    a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        height: 30px;
+        font-family: $font-regular;
+        width: 110px;
+        color: $color-cinco;
+
+        @include bp(tabletMD){
+            width: 140px;
+            height: 40px;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            right: 0px;
+            bottom: -0.5px;
+            height: calc(30px - 1px);
+            width: 30px;
+            background-color: transparent;
+            border: 1px solid $color-cinco;
+            transition: .2s ease;
+            border-radius: 25px;
+            z-index: -1;
+
+            @include bp(tabletMD){
+                height: calc(40px - 1px);
+                width: 40px;
+            }
+
+        }
+
+        &:hover{
+
+            &::before{
+                width: 118px;
+                background-color: $color-cinco;
+
+                @include bp(tabletMD){
+                    width: 149px;
+                }
+
+            }
+
+            .text,
+            .icon {
+                color: $color-cuarto;
+            }
+
+        }
+
+        .text{
+            margin-right: 10px;
+            border: 1px solid transparent;
+            transition: .2s ease;
+            font-size: rem(18px);
+
+            @include bp(tabletMD){
+                font-size: rem(22px);
+            }
+        }
+
+        .icon{
+            width: 30px;
+            height: 30px;
+            display: grid;
+            transition: .2s ease;
+            place-items: center;
+            border: 1px solid transparent;
+
+            @include bp(tabletMD){
+                width: 40px;
+                height: 40px;
+            }
+
+            i {
+                display: grid;
+                place-items: center;
+                font-size: rem(20px);
+
+                @include bp(tabletMD){
+                    font-size: rem(23px);
+                }
+
+            }
+
+        }
+
+    }
+
+}

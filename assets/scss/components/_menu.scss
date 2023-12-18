@@ -7,96 +7,172 @@ nav {
     align-items: center;
     position: sticky;
     top: 0px;
-    backdrop-filter: blur(0px);
-    // animation: header_view auto linear both;
-    // animation-timeline: scroll(root block);
-    // animation-range: 0px 150px;
-    
-
-    // @keyframes header_view {
-    //     from{
-    //         background-color: transparent;
-    //         // backdrop-filter: blur(0px);
-    //     }
-
-    //     to{
-    //         background-color: $color-cuarto-transparent;
-    //         // backdrop-filter: blur(2px);
-    //     }
-
-    // }
+    z-index: 999;
 
     @include bp(mobileBIG){
         padding: 20px 40px;
     }
 
+    @include bp(laptop){
+        padding: 20px 40px;
+
+        animation: padding_nav auto linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0px 150px;
+        
+
+        @keyframes padding_nav {
+            from{
+                padding: 20px 40px;
+            }
+
+            to{
+                padding: 10px 40px;
+            }
+
+        }
+
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+        animation: header_view auto linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0px 150px;
+        
+
+        @keyframes header_view {
+            from{
+                background-color: transparent;
+                backdrop-filter: blur(0px);
+            }
+
+            to{
+                background-color: $color-cuarto-transparent;
+                backdrop-filter: blur(10px);
+            }
+
+        }
+
+    }
+
     .menu{
         color: $color-cuarto;
         font-size: rem(35px);
-    }
 
-    .bbdo{
+        animation: hamburguerMenu auto linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0px 150px;
 
-        transform: translate(31%,50%) scale(0);
-        fill: $color-principal;
-
-        @include keyframes(bbdoAnimation){
-
-            0%{
-                transform: translate(31%,50%) scale(0);
+        @keyframes hamburguerMenu {
+            from{
+                color: $color-cuarto;
             }
 
-            5%{
-                transform: translate(0%) scale(1);
-            }
-
-            50%{
-                transform: translate(0%) scale(1);
-            }
-
-            55%{
-                transform: translate(31%,50%) scale(0);
-            }
-
-            100%{
-                transform: translate(31%,50%) scale(0);
+            to{
+                color: $color-cinco;
             }
 
         }
 
-        @include animate(bbdoAnimation, 20s, ease, infinite);
-
     }
 
-    .rnier{
 
-        translate: -60px;
+    svg{
 
-        @include keyframes(rnierAnimation){
+        fill: $color-cuarto;
+        animation: fill_SVG auto linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0px 150px;
 
-            0%{
-                translate: -60px;
+        @keyframes fill_SVG {
+            from{
+                fill: $color-cuarto;
             }
 
-            3%{
-                translate: 0px;
-            }
-
-            54%{
-                translate: 0px;
-            }
-
-            57%{
-                translate: -60px;
-            }
-
-            100%{
-                translate: -60px;
+            to{
+                fill: $color-cinco;
             }
 
         }
 
-        @include animate(rnierAnimation, 20s, ease, infinite);
+        g{
+            transition: 0s linear;
+        }
+        
+
+        .bbdo{
+
+            transform: translate(31%,50%) scale(0);
+            fill: $color-principal;
+    
+            @include keyframes(bbdoAnimation){
+    
+                0%{
+                    transform: translate(31%,50%) scale(0);
+                }
+    
+                5%{
+                    transform: translate(0%) scale(1);
+                }
+    
+                50%{
+                    transform: translate(0%) scale(1);
+                }
+    
+                55%{
+                    transform: translate(31%,50%) scale(0);
+                }
+    
+                100%{
+                    transform: translate(31%,50%) scale(0);
+                }
+    
+            }
+    
+            @include animate(bbdoAnimation, 20s, ease, infinite);
+    
+        }
+    
+        .rnier{
+    
+            translate: -60px;
+    
+            @include keyframes(rnierAnimation){
+    
+                0%{
+                    translate: -60px;
+                }
+    
+                3%{
+                    translate: 0px;
+                }
+    
+                54%{
+                    translate: 0px;
+                }
+    
+                57%{
+                    translate: -60px;
+                }
+    
+                100%{
+                    translate: -60px;
+                }
+    
+            }
+    
+            @include animate(rnierAnimation, 20s, ease, infinite);
+    
+        }
 
     }
 
@@ -115,6 +191,17 @@ nav {
         }
     }
 
+    .menu{
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+
+        @include bp(laptop){
+            display: none;
+        }
+
+    }
+
     .capa_exit{
 
         display: none;
@@ -128,6 +215,10 @@ nav {
             background-color: $color-two-transparent;
             backdrop-filter: blur(10px);
             height: 100%;
+            display: none;
+        }
+
+        @include bp(laptop){
             display: none;
         }
 
@@ -149,8 +240,13 @@ nav {
         @include bp(mobileBIG){
             width: 350px;
             left: -350px;
+        }
 
-
+        @include bp(laptop){
+            position: relative;
+            background-color: transparent;
+            width: initial;
+            left: initial;
         }
 
         div {
@@ -170,10 +266,15 @@ nav {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                cursor: pointer;
                 
                 @include bp(mobileBIG){
                     top: 20px;
                     right: 20px;
+                }
+
+                @include bp(laptop){
+                    display: none;
                 }
 
                 .close{
@@ -189,6 +290,11 @@ nav {
     
                 width: 100%;
                 list-style: none;
+
+                @include bp(laptop){
+                    display: flex;
+                    column-gap: 20px;
+                }
     
                 li {
     
@@ -203,13 +309,117 @@ nav {
                         font-size: rem(40px);
                         padding: 5px 15px;
                     }
+
+                    @include bp(laptop){
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: rem(19px);
+                        padding: 10px 0px;
+                    }
     
                     a {
-                        color: $color-tres;
+
+                        color: $color-cuarto;
                         text-decoration: none;
+
+                        @include bp(laptop){
+
+                            position: relative;
+                            overflow: hidden;
+                            display: inline-block;
+                            animation: color_link auto linear both;
+                            animation-timeline: scroll(root block);
+                            animation-range: 0px 150px;
+
+                            &::after{
+                                content: attr(data-replace);
+                                position: absolute;
+                                top: 0%;
+                                width: 100%;
+                                height: 100%;
+                                // left: 100%;
+                                transform-origin: 100% 50%;
+                                transform: translate3d(200%, 0, 0);
+                                transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+                                text-align: center;
+                            }
+
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                left: 0;
+                                background-color: $color-principal;
+                                height: 2px;
+                                bottom: 0;
+                                transform-origin: 100% 50%;
+                                transform: scaleX(0);
+                                transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+                                border-radius: 10px;
+                              }
+                            
+
+                            @keyframes color_link {
+                                from{
+                                    color: $color-cuarto;
+                                }
+
+                                to{
+                                    color: $color-cinco;
+                                }
+
+                            }
+                        }
+
+                        span {
+
+                            @include bp(laptop){
+
+                                // transform: translateX(0%);
+                                transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+                                display: block;
+
+                            }
+
+                        }
+
+                        &:hover{
+
+                            @include bp(laptop){
+
+                                &::after{
+                                    transform: translate3d(0, 0, 0);
+                                }
+                                
+                                &::before {
+                                    transform-origin: 0% 50%;
+                                    transform: scaleX(1);
+                                }
+
+                                span {
+                                    // transform: translateX(-100%);
+                                    transform: translate3d(-200%, 0, 0);
+                                }
+
+                            }
+                        }
                     }
                 }
             }
         }
     }
+}
+
+nav.fixed{
+
+    position: fixed;
+    width: calc(100% - 30px);
+    top: 0px;
+
+    @include bp(mobileBIG){
+        width: calc(100% - 80px);
+    }
+
 }

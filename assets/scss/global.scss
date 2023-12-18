@@ -1,5 +1,11 @@
+@use "sass:math";
+
 @import './variables';
 @import './components/menu';
+@import './components/footer';
+@import './pages/home/video';
+@import './pages/home/marquee';
+@import './pages/home/slider';
 
 *,
 html,
@@ -10,8 +16,6 @@ body{
     transition: .2s ease;
 }
 
-
-main{
-    height: 300vh;
-    background-color: blue;
+html{
+    scrollbar-gutter: stable;
 }

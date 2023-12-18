@@ -28,11 +28,11 @@
 // Convert px to rem
 
 @function stripUnit($value) {
-    @return $value / ($value * 0 + 1);
+    @return math.div($value, $value * 0 + 1);
 }
 
 @function rem($pxValue) {
-    @return #{stripUnit($pxValue) / stripUnit(16px)}rem;
+    @return #{ math.div(stripUnit( $pxValue), stripUnit(16px))}rem;
 }
 
 // Media query
@@ -68,4 +68,6 @@ $color-two: #00263a;
 $color-two-transparent: #00263a76;
 $color-tres: #c4cfda;
 $color-cuarto: #fff;
-$color-cuarto-transparent: #ffffffba;
+$color-cuarto-transparent: #ffffff4f;
+$color-cinco: #000;
+$color-cinco-transparent: #00000067;

@@ -1,0 +1,27 @@
+.marquee_home{
+
+    min-height: 7vh;
+
+    @include bp(laptop){
+        min-height: 5vh;
+    }
+
+    p {
+        font-family: $font-regular;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: rem(17px);
+
+        @include bp(laptop){
+            font-size: rem(18px);
+        }
+
+        span {
+            display: block;
+            margin: 0px 15px;
+        }
+
+    }
+
+}
