@@ -17,7 +17,7 @@ nav {
         padding: 20px 40px;
 
         animation: padding_nav auto linear both;
-        animation-timeline: scroll(root block);
+        animation-timeline: scroll(root block) !important;
         animation-range: 0px 150px;
         
 
@@ -45,7 +45,7 @@ nav {
         background-color: transparent;
         backdrop-filter: blur(0px);
         animation: header_view auto linear both;
-        animation-timeline: scroll(root block);
+        animation-timeline: scroll(root block) !important;
         animation-range: 0px 150px;
         
 
@@ -69,7 +69,7 @@ nav {
         font-size: rem(35px);
 
         animation: hamburguerMenu auto linear both;
-        animation-timeline: scroll(root block);
+        animation-timeline: scroll(root block) !important;
         animation-range: 0px 150px;
 
         @keyframes hamburguerMenu {
@@ -90,7 +90,7 @@ nav {
 
         fill: $color-cuarto;
         animation: fill_SVG auto linear both;
-        animation-timeline: scroll(root block);
+        animation-timeline: scroll(root block) !important;
         animation-range: 0px 150px;
 
         @keyframes fill_SVG {
@@ -329,7 +329,7 @@ nav {
                             overflow: hidden;
                             display: inline-block;
                             animation: color_link auto linear both;
-                            animation-timeline: scroll(root block);
+                            animation-timeline: scroll(root block) !important;
                             animation-range: 0px 150px;
 
                             &::after{
