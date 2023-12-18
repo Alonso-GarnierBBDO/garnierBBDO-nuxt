@@ -5,9 +5,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0px;
+    // position: sticky;
+    // top: 0px;
     z-index: 999;
+    transition: .6s ease;
 
     @include bp(mobileBIG){
         padding: 20px 40px;
@@ -16,21 +17,21 @@ nav {
     @include bp(laptop){
         padding: 20px 40px;
 
-        animation: padding_nav auto linear both;
-        animation-timeline: scroll(root block) !important;
-        animation-range: 0px 150px;
+        // animation: padding_nav auto linear both;
+        // animation-timeline: scroll(root block) !important;
+        // animation-range: 0px 150px;
         
 
-        @keyframes padding_nav {
-            from{
-                padding: 20px 40px;
-            }
+        // @keyframes padding_nav {
+        //     from{
+        //         padding: 20px 40px;
+        //     }
 
-            to{
-                padding: 10px 40px;
-            }
+        //     to{
+        //         padding: 10px 40px;
+        //     }
 
-        }
+        // }
 
     }
 
@@ -44,44 +45,46 @@ nav {
         z-index: -1;
         background-color: transparent;
         backdrop-filter: blur(0px);
-        animation: header_view auto linear both;
-        animation-timeline: scroll(root block) !important;
-        animation-range: 0px 150px;
+        transition: .6s ease;
+        // animation: header_view auto linear both;
+        // animation-timeline: scroll(root block) !important;
+        // animation-range: 0px 150px;
         
 
-        @keyframes header_view {
-            from{
-                background-color: transparent;
-                backdrop-filter: blur(0px);
-            }
+        // @keyframes header_view {
+        //     from{
+        //         background-color: transparent;
+        //         backdrop-filter: blur(0px);
+        //     }
 
-            to{
-                background-color: $color-cuarto-transparent;
-                backdrop-filter: blur(10px);
-            }
+        //     to{
+        //         background-color: $color-cuarto-transparent;
+        //         backdrop-filter: blur(10px);
+        //     }
 
-        }
+        // }
 
     }
 
     .menu{
         color: $color-cuarto;
         font-size: rem(35px);
+        transition: .4s ease;
 
-        animation: hamburguerMenu auto linear both;
-        animation-timeline: scroll(root block) !important;
-        animation-range: 0px 150px;
+        // animation: hamburguerMenu auto linear both;
+        // animation-timeline: scroll(root block) !important;
+        // animation-range: 0px 150px;
 
-        @keyframes hamburguerMenu {
-            from{
-                color: $color-cuarto;
-            }
+        // @keyframes hamburguerMenu {
+        //     from{
+        //         color: $color-cuarto;
+        //     }
 
-            to{
-                color: $color-cinco;
-            }
+        //     to{
+        //         color: $color-cinco;
+        //     }
 
-        }
+        // }
 
     }
 
@@ -89,20 +92,20 @@ nav {
     svg{
 
         fill: $color-cuarto;
-        animation: fill_SVG auto linear both;
-        animation-timeline: scroll(root block) !important;
-        animation-range: 0px 150px;
+        // animation: fill_SVG auto linear both;
+        // animation-timeline: scroll(root block) !important;
+        // animation-range: 0px 150px;
 
-        @keyframes fill_SVG {
-            from{
-                fill: $color-cuarto;
-            }
+        // @keyframes fill_SVG {
+        //     from{
+        //         fill: $color-cuarto;
+        //     }
 
-            to{
-                fill: $color-cinco;
-            }
+        //     to{
+        //         fill: $color-cinco;
+        //     }
 
-        }
+        // }
 
         g{
             transition: 0s linear;
@@ -322,15 +325,16 @@ nav {
 
                         color: $color-cuarto;
                         text-decoration: none;
+                        transition: .4s ease;
 
                         @include bp(laptop){
 
                             position: relative;
                             overflow: hidden;
                             display: inline-block;
-                            animation: color_link auto linear both;
-                            animation-timeline: scroll(root block) !important;
-                            animation-range: 0px 150px;
+                            // animation: color_link auto linear both;
+                            // animation-timeline: scroll(root block) !important;
+                            // animation-range: 0px 150px;
 
                             &::after{
                                 content: attr(data-replace);
@@ -361,16 +365,16 @@ nav {
                               }
                             
 
-                            @keyframes color_link {
-                                from{
-                                    color: $color-cuarto;
-                                }
+                            // @keyframes color_link {
+                            //     from{
+                            //         color: $color-cuarto;
+                            //     }
 
-                                to{
-                                    color: $color-cinco;
-                                }
+                            //     to{
+                            //         color: $color-cinco;
+                            //     }
 
-                            }
+                            // }
                         }
 
                         span {
@@ -422,4 +426,48 @@ nav.fixed{
         width: calc(100% - 80px);
     }
 
+}
+
+nav.top,
+nav.bottom{
+
+    @include bp(laptop){
+        padding: 10px 40px;    
+    }
+
+    &::before{
+        background-color: $color-cuarto-transparent;
+        backdrop-filter: blur(10px);
+    }
+
+
+    .menu{
+        color: $color-cinco;
+    }
+
+    svg{
+        fill: $color-cinco;
+    }
+
+    .items_menu {
+        div {
+            ul {
+                li {
+                    a{
+                        @include bp(laptop){
+                            color: $color-cinco;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+nav.top{
+    top: 0%;
+}
+
+nav.bottom{
+    top: -15%;
 }

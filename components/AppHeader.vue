@@ -1,5 +1,5 @@
 <template>
-  <nav :class="`${nameRoute == 'index' ? 'fixed' : ''}`">
+  <nav :class="`${nameRoute == 'index' ? 'fixed' : ''} ${top ? 'top' : ''} ${bottom ? 'bottom' : ''}`">
     <NuxtLink to="/" data-replace="Garnier">
       <AppLogoGarnier />
     </NuxtLink>
@@ -50,12 +50,44 @@
       return {
         nameRoute: '',
         router: useRoute().name,
+        previosScrollY: 0  as number,
+        top: false,
+        bottom: false,
+      }
+    },
+    methods: {
+      menuScroll(){
+
+        window.onscroll = () => {
+
+          if(window.scrollY >= 120){
+            let currentScrollY = window.scrollY;
+
+            if(currentScrollY < this.previosScrollY){
+              this.top = true;
+              this.bottom = false;
+            }else{
+              this.top = false;
+              this.bottom = true;
+            }
+
+            this.previosScrollY = currentScrollY;
+          }else {
+            this.top = false;
+            this.bottom = false;
+          }
+
+        }
+
       }
     },
     watch: {
       $route(to, from){
         this.nameRoute = to.name.toString();
       }
+    },
+    mounted(){
+      this.menuScroll();
     },
     created() {
       if(this.router){
