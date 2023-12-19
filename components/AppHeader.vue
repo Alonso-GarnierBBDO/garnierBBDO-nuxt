@@ -1,10 +1,10 @@
 <template>
-  <nav :class="`${nameRoute == 'index' ? 'fixed' : ''} ${top ? 'top' : ''} ${bottom ? 'bottom' : ''}`">
+  <nav :class="`${routerName == 'index' ? 'fixed' : ''} ${top ? 'top' : ''} ${bottom ? 'bottom' : ''}`">
     <div class="nav">
       <NuxtLink to="/" data-replace="Garnier">
         <AppLogoGarnier />
       </NuxtLink>
-      <input type="checkbox" id="openMenu" />
+      <input type="checkbox" ref="checkMenu" id="openMenu" />
       <label for="openMenu" class="menu">
         <BootstrapIcon class="menu" name="list" />
       </label>
@@ -16,10 +16,10 @@
           </label>
           <ul>
             <li>
-              <NuxtLink to="/" data-replace="Garnier"><span>Garnier</span></NuxtLink>
+              <NuxtLink onclick="closeMenu" to="/" data-replace="Garnier"><span>Garnier</span></NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/insaltable" data-replace="Insaltable"><span>Insaltable</span></NuxtLink>
+              <NuxtLink onclick="closeMenu" to="/insaltable" data-replace="Insaltable"><span>Insaltable</span></NuxtLink>
             </li>
             <li>
               <a href="" data-replace="Clientes"><span>Clientes</span></a>
@@ -33,9 +33,9 @@
             <li>
               <a href="" data-replace="Blog"><span>Blog</span></a>
             </li>
-            <!-- <li> -->
-              <!-- <a href="">Ingresar</a> -->
-            <!-- </li> -->
+            <!-- <li>
+              <a href="">{{ routerName }}</a>
+            </li> -->
           </ul>
         </div>
       </section>
@@ -46,12 +46,25 @@
 
 <script lang="ts">
 
-  export default{
+  import { ref } from 'vue';
 
+  export default{
+    setup(){
+
+      const route = useRoute();
+      let routerName : Ref<string | undefined> = ref(route.name?.toString());
+
+      watch(() => route.path, () => {
+        routerName.value = route.name?.toString();
+      })
+
+      return {
+        routerName
+      }
+
+    },
     data(){
       return {
-        nameRoute: '',
-        router: useRoute().name,
         previosScrollY: 0  as number,
         top: false,
         bottom: false,
@@ -64,7 +77,6 @@
 
           if(window.scrollY >= 120){
             let currentScrollY = window.scrollY;
-
             if(currentScrollY < this.previosScrollY){
               this.top = true;
               this.bottom = false;
@@ -74,31 +86,28 @@
             }
 
             this.previosScrollY = currentScrollY;
+
           }else {
             this.top = false;
             this.bottom = false;
           }
 
         }
-
-      }
+      },
     },
     watch: {
       $route(to, from){
-        this.nameRoute = to.name.toString();
+        const inputElement : HTMLInputElement  = this.$refs.checkMenu as HTMLInputElement;
+
+        if(inputElement){
+          inputElement.checked = false;
+        }
+        
       }
     },
     mounted(){
       this.menuScroll();
     },
-    created() {
-      if(this.router){
-        this.nameRoute = this.router.toString();
-      }
-    }
-
   }
-
-
 
 </script>

@@ -55,7 +55,7 @@
 
 
 <template>
-    <div class="video_home">
+    <div class="video_portafolio">
         <video ref="videoPlayer" class="video-js"></video>
     </div>
 </template>

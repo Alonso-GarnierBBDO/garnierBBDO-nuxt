@@ -44,12 +44,22 @@
     <div class="page portafolio">
         <h1>Portafolio Garnier BBDO</h1>
         <section class="all">
-            <article v-for="(item, key) in data?.data.items.items" :key="key" :style="{backgroundImage: `url(${item.image})`}">
-                <PortafolioAppVideo v-if="key == 0" :video="item.video" :posterVideo="item.image"/>
-                <section class="content" v-else>
-                    <h2>{{ item.name }}</h2>
+            <NuxtLink v-for="(item, key) in data?.data.items.items" :key="key" :style="{backgroundImage: `url(${item.image})`}" :to="`/insaltable/${item.slug}`" :title="item.name">
+                <video v-if="key == 0" :poster="item.image" :src="item.video" muted autoplay loop></video>
+                <!-- <PortafolioAppVideo v-if="key == 0" :video="item.video" :posterVideo="item.image"/> -->
+                <section class="content">
+                    <div>
+                        <h2>{{ item.name }}</h2>
+                        <span>{{ item.client }}</span>
+                    </div>
+                    <div class="next">
+                        <button>
+                            <BootstrapIcon name="arrow-right" />
+                        </button>
+                    </div>
                 </section>
-            </article>
+                
+            </NuxtLink>
         </section>
     </div>
 </template>

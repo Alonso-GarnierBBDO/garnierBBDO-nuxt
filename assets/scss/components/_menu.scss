@@ -7,6 +7,8 @@ nav {
     align-items: center;
     z-index: 999;
     transition: .6s ease;
+    position: sticky;
+    top: -15%;
 
     @include bp(mobileBIG){
         padding: 20px 30px;
@@ -253,11 +255,19 @@ nav {
     
                 li {
     
-                    padding: 10px 15px;
+                    padding: 10px 20px;
                     text-align: right;
-                    font-size: rem(50px);
+                    font-size: rem(40px);
                     font-family: $font-regular;
                     line-height: 35px;
+                    
+                    &:first-of-type{
+
+                        @include bp(laptop){
+                            display: none;
+                        }
+
+                    }
     
                     @include bp(mobileBIG){
                         text-align: left;
@@ -278,6 +288,7 @@ nav {
                         color: $color-cuarto;
                         text-decoration: none;
                         transition: .4s ease;
+                        text-transform: uppercase;
 
                         @include bp(laptop){
 
@@ -349,6 +360,18 @@ nav {
                             }
                         }
                     }
+
+                    a.router-link-active{
+                        color: $color-principal;
+
+                        @include bp(laptop){
+                            &::before {
+                                transform-origin: 0% 50%;
+                                transform: scaleX(1);
+                            }
+                        }
+
+                    }
                 }
             }
         }
@@ -373,9 +396,15 @@ nav.fixed{
         div{
             ul{
                 li{
+
                     a{
                         color: $color-cuarto;
                     }
+
+                    a.router-link-active{
+                        color: $color-principal;
+                    }
+
                 }
             }
         }
@@ -392,8 +421,8 @@ nav.bottom,
 nav.top.fixed,
 nav.bottom.fixed{
 
-    position: fixed;
-    width: calc(100% - 40px);
+    // position: fixed;
+    // width: calc(100% - 40px);
 
     @include bp(mobileBIG){
         width: calc(100% - 60px);
@@ -426,6 +455,11 @@ nav.bottom.fixed{
                             color: $color-cinco;
                         }
                     }
+
+                    a.router-link-active{
+                        color: $color-principal;
+                    }
+
                 }
             }
         }
