@@ -72,6 +72,7 @@ footer {
                     position: relative;
                     overflow: hidden;
                     display: inline-block;
+                    font-size: rem(17px);
 
                     &::after{
                         content: attr(data-replace);
@@ -163,6 +164,7 @@ footer {
 
                 @include bp(laptop){
 
+                    font-size: rem(17px);
                     position: relative;
                     overflow: hidden;
                     display: inline-block;
@@ -257,6 +259,11 @@ footer {
                 text-transform: uppercase;
 
                 @include bp(tabletMD){
+                    text-align: left;
+                    font-size: rem(16px);
+                }
+
+                @include bp(laptop){
                     text-align: left;
                     font-size: rem(16px);
                 }

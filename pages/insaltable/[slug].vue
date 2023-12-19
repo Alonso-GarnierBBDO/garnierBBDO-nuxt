@@ -1,5 +1,72 @@
+<script setup lang="ts">
+
+    interface AsyncDataResult {
+        data: {
+            status: string,
+            item: {
+                titulo: string,
+                images: string[]
+                client: string,
+                video: string,
+                content: string,
+                description: string,
+            }
+        }
+    }
+
+    const route = useRoute();
+    const param = route.params.slug;
+
+    // Insaltable individual
+    const { data, status } = await useAsyncData <AsyncDataResult> (
+        'portafolio',
+        () => $fetch( `/api/portafolio/${param}`, {
+            method: 'GET',
+            baseURL: 'https://admin.garnierbbdo.com',
+        })
+    );
+    
+
+    if(!data.value){
+        showError(
+            createError({
+                statusCode: 404,
+                statusMessage : 'Not Found'
+            })
+        )
+    }
+
+    console.log(data.value?.data)
+
+    useHead({
+        title : `Garnier BBDO - ${data.value?.data.item.titulo}`,
+        meta: [
+            { 
+                name: 'description', 
+                content: data.value?.data.item.description
+            }
+        ],
+    });
+
+</script>
+
 <template>
-    <div>
-        Hola mundo
+    <div class="portafolio-individual">
+        <PortafolioAppVideo  class="video" :video="data?.data.item.video"/>
+        <section class="page content" id="content">
+            <section class="title">
+                <h1 :title="data?.data.item.titulo">{{ data?.data.item.titulo }} </h1>
+                <a href="#content">
+                    <BootstrapIcon name="arrow-down" />
+                </a>
+            </section>
+            <section class="description">
+                <p>{{ data?.data.item.description }}</p>
+            </section>
+            <section class="contenido" v-html="data?.data.item.content"></section>
+            <section class="images">
+                <NuxtPicture v-for="(item, key) in data?.data.item.images" :key="key" format="avif,webp" :src="item" />
+            </section>
+        </section>
     </div>
 </template>

@@ -14,10 +14,10 @@
             return {
                 player: null as any,
                 videoOptions: {
-                    autoplay: true,
+                    autoplay: false,
                     controls: true,
                     loop: true,
-                    muted: true,
+                    muted: false,
                     poster: this.posterVideo,
                     sources: [
                         {

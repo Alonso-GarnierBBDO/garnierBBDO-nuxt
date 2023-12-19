@@ -1,5 +1,5 @@
 <template>
-  <nav :class="`${routerName == 'index' ? 'fixed' : ''} ${top ? 'top' : ''} ${bottom ? 'bottom' : ''}`">
+  <nav :class="`${routerName == 'index' || routerName == 'insaltable-slug' ? 'fixed' : ''} ${top ? 'top' : ''} ${bottom ? 'bottom' : ''}`">
     <div class="nav">
       <NuxtLink to="/" data-replace="Garnier">
         <AppLogoGarnier />
