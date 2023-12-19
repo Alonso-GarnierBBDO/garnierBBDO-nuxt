@@ -1,9 +1,9 @@
 .marquee_home{
 
-    min-height: 7vh;
+    min-height: 50px;
 
     @include bp(laptop){
-        min-height: 5vh;
+        min-height: 50px;
     }
 
     p {

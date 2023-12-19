@@ -1,38 +1,20 @@
 nav {
 
     background-color: transparent;
-    padding: 15px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // position: sticky;
-    // top: 0px;
     z-index: 999;
     transition: .6s ease;
 
     @include bp(mobileBIG){
-        padding: 20px 40px;
+        padding: 20px 30px;
     }
 
-    @include bp(laptop){
-        padding: 20px 40px;
-
-        // animation: padding_nav auto linear both;
-        // animation-timeline: scroll(root block) !important;
-        // animation-range: 0px 150px;
-        
-
-        // @keyframes padding_nav {
-        //     from{
-        //         padding: 20px 40px;
-        //     }
-
-        //     to{
-        //         padding: 10px 40px;
-        //     }
-
-        // }
-
+    @include bp(escritorio){
+        padding: 20px 30px;
+        margin: auto;
     }
 
     &::before{
@@ -46,66 +28,35 @@ nav {
         background-color: transparent;
         backdrop-filter: blur(0px);
         transition: .6s ease;
-        // animation: header_view auto linear both;
-        // animation-timeline: scroll(root block) !important;
-        // animation-range: 0px 150px;
-        
+    }
 
-        // @keyframes header_view {
-        //     from{
-        //         background-color: transparent;
-        //         backdrop-filter: blur(0px);
-        //     }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
 
-        //     to{
-        //         background-color: $color-cuarto-transparent;
-        //         backdrop-filter: blur(10px);
-        //     }
+        @include bp(laptop){
+            max-width: 1300px;
+            margin: auto;
+        }
 
-        // }
+        @include bp(escritorio){
+            max-width: 1700px;
+        }
 
     }
 
     .menu{
-        color: $color-cuarto;
+        color: $color-cinco;
         font-size: rem(35px);
         transition: .4s ease;
-
-        // animation: hamburguerMenu auto linear both;
-        // animation-timeline: scroll(root block) !important;
-        // animation-range: 0px 150px;
-
-        // @keyframes hamburguerMenu {
-        //     from{
-        //         color: $color-cuarto;
-        //     }
-
-        //     to{
-        //         color: $color-cinco;
-        //     }
-
-        // }
-
     }
 
 
     svg{
 
-        fill: $color-cuarto;
-        // animation: fill_SVG auto linear both;
-        // animation-timeline: scroll(root block) !important;
-        // animation-range: 0px 150px;
-
-        // @keyframes fill_SVG {
-        //     from{
-        //         fill: $color-cuarto;
-        //     }
-
-        //     to{
-        //         fill: $color-cinco;
-        //     }
-
-        // }
+        fill: $color-cinco;
 
         g{
             transition: 0s linear;
@@ -239,6 +190,7 @@ nav {
         justify-content: center;
         align-items: center;
         transition: .5s ease;
+        z-index: 999;
 
         @include bp(mobileBIG){
             width: 350px;
@@ -332,9 +284,7 @@ nav {
                             position: relative;
                             overflow: hidden;
                             display: inline-block;
-                            // animation: color_link auto linear both;
-                            // animation-timeline: scroll(root block) !important;
-                            // animation-range: 0px 150px;
+                            color: $color-cinco;
 
                             &::after{
                                 content: attr(data-replace);
@@ -364,17 +314,6 @@ nav {
                                 border-radius: 10px;
                               }
                             
-
-                            // @keyframes color_link {
-                            //     from{
-                            //         color: $color-cuarto;
-                            //     }
-
-                            //     to{
-                            //         color: $color-cinco;
-                            //     }
-
-                            // }
                         }
 
                         span {
@@ -419,20 +358,49 @@ nav {
 nav.fixed{
 
     position: fixed;
-    width: calc(100% - 30px);
+    width: calc(100% - 40px);
     top: 0px;
 
     @include bp(mobileBIG){
-        width: calc(100% - 80px);
+        width: calc(100% - 60px);
+    }
+    
+    svg {
+        fill: $color-cuarto;
+    }
+
+    .items_menu{
+        div{
+            ul{
+                li{
+                    a{
+                        color: $color-cuarto;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu{
+        color: $color-cuarto;
     }
 
 }
 
 nav.top,
-nav.bottom{
+nav.bottom,
+nav.top.fixed,
+nav.bottom.fixed{
+
+    position: fixed;
+    width: calc(100% - 40px);
+
+    @include bp(mobileBIG){
+        width: calc(100% - 60px);
+    }
 
     @include bp(laptop){
-        padding: 10px 40px;    
+        padding: 10px 30px;    
     }
 
     &::before{

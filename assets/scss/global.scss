@@ -19,3 +19,22 @@ body{
 html{
     scrollbar-gutter: stable;
 }
+
+.page{
+    
+    padding: 0px 20px;
+
+    @include bp(mobileBIG){
+        padding: 0px 30px;
+    }
+
+    @include bp(laptop){
+        max-width: 1300px;
+        margin: auto;
+        padding: 0px 30px;
+    }
+
+    @include bp(escritorio){
+        max-width: 1700px;
+    }
+}

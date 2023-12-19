@@ -1,6 +1,6 @@
 .slider{
     
-    margin-top: 10px;
+    margin-top: 30px;
 
     .swiper  {
 
@@ -14,7 +14,7 @@
 
         .item{
 
-            padding: 0px 30px;
+            padding: 0px 20px;
             display: flex;
 
             @include bp(mobileBIG){
@@ -109,13 +109,23 @@
 }
 
 .insaltable_link{
-    margin-top: 15px;
+    margin-top: 30px;
     padding: 0px 30px;
     display: flex;
     justify-content: center;
 
     @include bp(tabletMD){
         justify-content: flex-end;
+    }
+
+    @include bp(laptop){
+        max-width: 1300px;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    @include bp(escritorio){
+        max-width: 1700px;
     }
 
     a {
