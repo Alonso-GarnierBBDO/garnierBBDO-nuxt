@@ -19,7 +19,10 @@
                     controls: true,
                     loop: true,
                     muted: true,
+                    preload: true,
+                    role: 'application',
                     poster: this.posterVideo,
+                    playsinline: true,
                     sources: [
                         {
                             src: this.videoDesk,
@@ -59,6 +62,6 @@
 
 <template>
     <div class="video_home">
-        <video ref="videoPlayer" class="video-js" :src="videoOptions.sources[0].src" :type="videoOptions.sources[0].type" playsinline></video>
+        <video ref="videoPlayer" class="video-js" :src="videoOptions.sources[0].src" :type="videoOptions.sources[0].type"></video>
     </div>
 </template>
