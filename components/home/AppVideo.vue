@@ -12,6 +12,7 @@
 <script lang="ts">
 
     import VideoJS from 'video.js';
+    import 'video.js/dist/video-js.css';
 
     export default{
         name: 'VideoPlayer',
@@ -29,7 +30,8 @@
             video_item(){
                 
                 VideoJS('#video', {
-                    autoplay: 'muted'
+                    autoplay: 'muted',
+                    controls: true,
                 });
 
             }
