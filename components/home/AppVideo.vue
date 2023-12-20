@@ -1,3 +1,10 @@
+
+<template>
+    <div class="video_home">
+        <video ref="videoPlayer" class="video-js" :src="videoOptions.sources[0].src" playsinline="true" :type="videoOptions.sources[0].type"></video>
+    </div>
+</template>
+
 <script lang="ts">
 
     import videojs from 'video.js';
@@ -56,10 +63,3 @@
     }
 
 </script>
-
-
-<template>
-    <div class="video_home">
-        <video ref="videoPlayer" class="video-js" :src="videoOptions.sources[0].src" playsinline="true" :type="videoOptions.sources[0].type"></video>
-    </div>
-</template>
