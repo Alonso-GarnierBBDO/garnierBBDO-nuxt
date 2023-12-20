@@ -19,6 +19,7 @@
                     loop: true,
                     muted: false,
                     poster: this.posterVideo,
+                    playsinline: true,
                     sources: [
                         {
                             src: this.video,
@@ -56,6 +57,6 @@
 
 <template>
     <div class="video_portafolio">
-        <video ref="videoPlayer" class="video-js" :playsinline="true"></video>
+        <video ref="videoPlayer" class="video-js"></video>
     </div>
 </template>
