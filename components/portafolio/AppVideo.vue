@@ -56,6 +56,6 @@
 
 <template>
     <div class="video_portafolio">
-        <video ref="videoPlayer" class="video-js"></video>
+        <video ref="videoPlayer" class="video-js" :playsinline="true"></video>
     </div>
 </template>

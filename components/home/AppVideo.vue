@@ -20,7 +20,6 @@
                     loop: true,
                     muted: true,
                     preload: true,
-                    role: 'application',
                     poster: this.posterVideo,
                     sources: [
                         {
@@ -61,6 +60,6 @@
 
 <template>
     <div class="video_home">
-        <video ref="videoPlayer" class="video-js" :src="videoOptions.sources[0].src" playsinline :type="videoOptions.sources[0].type"></video>
+        <video ref="videoPlayer" class="video-js" :src="videoOptions.sources[0].src" playsinline="true" :type="videoOptions.sources[0].type"></video>
     </div>
 </template>
