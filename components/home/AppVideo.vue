@@ -1,16 +1,17 @@
 
 <template>
     <div class="video_home">
-        <VideoAppVideo :video="video" :poster="posterVideo"/>
-        <!-- <video ref="videoPlayer" class="video-js" :src="videoOptions.sources[0].src" playsinline="true" :type="videoOptions.sources[0].type"></video> -->
+        
+        <video src="" id="video" class="video-js">
+            <source src="//vjs.zencdn.net/v/oceans.mp4">
+        </video>
+
     </div>
 </template>
 
 <script lang="ts">
 
-    import videojs from 'video.js';
-    import 'video.js/dist/video-js.css';
-
+    import VideoJS from 'video.js';
 
     export default{
         name: 'VideoPlayer',
@@ -21,46 +22,25 @@
         },
         data() {
             return {
-                player: null as any,
                 video: this.videoDesk,
-                videoOptions: {
-                    autoplay: true,
-                    controls: true,
-                    loop: true,
-                    muted: true,
-                    preload: true,
-                    poster: this.posterVideo,
-                    sources: [
-                        {
-                            src: this.videoDesk,
-                            type: 'video/webm',
-                        }
-                    ],
-                }
+            }
+        },
+        methods:{
+            video_item(){
+                
+                VideoJS('#video', {
+                    autoplay: 'muted'
+                });
+
             }
         },
         mounted() {
 
-            // const element : HTMLVideoElement = this.$refs.videoPlayer as HTMLVideoElement;
+            this.video = window.innerWidth <= 550 ? this.videoMobile : this.videoDesk;
 
-            this.videoOptions.sources[0].src = window.innerWidth <= 550 ? this.videoMobile : this.videoDesk;
-
-            // if(element){
-
-            //     this.player = videojs(element, this.videoOptions, () => {
-            //         this.player.log('onPlayerReady', this);
-            //     });
-
-            // }
+            this.video_item();
 
         },
-
-        beforeDestroy() {
-
-            // if (this.player) {
-            //     this.player.dispose();
-            // }
-        }
 
     }
 
