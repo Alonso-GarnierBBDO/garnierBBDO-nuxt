@@ -1,7 +1,8 @@
 
 <template>
     <div class="video_home">
-        <video ref="videoPlayer" class="video-js" :src="videoOptions.sources[0].src" playsinline="true" :type="videoOptions.sources[0].type"></video>
+        <VideoAppVideo :video="video" :poster="posterVideo"/>
+        <!-- <video ref="videoPlayer" class="video-js" :src="videoOptions.sources[0].src" playsinline="true" :type="videoOptions.sources[0].type"></video> -->
     </div>
 </template>
 
@@ -21,6 +22,7 @@
         data() {
             return {
                 player: null as any,
+                video: this.videoDesk,
                 videoOptions: {
                     autoplay: true,
                     controls: true,
@@ -39,25 +41,25 @@
         },
         mounted() {
 
-            const element : HTMLVideoElement = this.$refs.videoPlayer as HTMLVideoElement;
+            // const element : HTMLVideoElement = this.$refs.videoPlayer as HTMLVideoElement;
 
             this.videoOptions.sources[0].src = window.innerWidth <= 550 ? this.videoMobile : this.videoDesk;
 
-            if(element){
+            // if(element){
 
-                this.player = videojs(element, this.videoOptions, () => {
-                    this.player.log('onPlayerReady', this);
-                });
+            //     this.player = videojs(element, this.videoOptions, () => {
+            //         this.player.log('onPlayerReady', this);
+            //     });
 
-            }
+            // }
 
         },
 
         beforeDestroy() {
 
-            if (this.player) {
-                this.player.dispose();
-            }
+            // if (this.player) {
+            //     this.player.dispose();
+            // }
         }
 
     }
