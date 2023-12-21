@@ -2,7 +2,7 @@
 <template>
     <div class="video_home" ref="videoHome">
         <video id="video" class="video-js vjs-theme-city" :poster="posterVideo">
-            <source :src="width <= 550 ? videoMobile : videoDesk">
+            <source :src="videoItem">
         </video>
     </div>
 </template>
@@ -28,13 +28,26 @@
             }
         },
         methods:{
+            
+            selectVideo(){
+                this.videoItem = window.innerWidth <= 550 ? this.videoMobile : this.videoDesk;
+            },
+
             video_item(){
                 
+                this.selectVideo();
+
                 VideoJS('#video', {
                     autoplay: 'muted',
                     controls: true,
                     loop: true,
                     preload: true,
+                    sources: [
+                        {
+                            src: this.videoItem,
+                            type: `video/${this.videoItem?.split('.').pop()}`
+                        }, 
+                    ]
                 });
 
             },
@@ -50,10 +63,12 @@
         },
         mounted() {
 
-            this.width = window.innerWidth;
-
             this.video_item();
             this.height_video();
+
+            window.onresize = () => {
+                this.height_video();
+            }
 
         },
 
