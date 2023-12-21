@@ -19,7 +19,7 @@
     }
 
     useHead({
-        title : 'Garnier BBDO - Agencia de año',
+        title : 'Garnier BBDO - Agencia del año',
         meta: [
             { 
                 name: 'description', 
@@ -35,11 +35,11 @@
             },
             { 
                 name: 'og:title', 
-                content: 'Garnier BBDO - Agencia de año' 
+                content: 'Garnier BBDO - Agencia del año' 
             },
             { 
                 name: 'twitter:title', 
-                content: 'Garnier BBDO - Agencia de año' 
+                content: 'Garnier BBDO - Agencia del año' 
             },
             { 
                 name: 'og:description', 
@@ -70,7 +70,6 @@
         <section class="all">
             <NuxtLink v-for="(item, key) in data?.data.items.items" :key="key" :style="{backgroundImage: `url(${item.image})`}" :to="`/insaltable/${item.slug}`" :title="item.name">
                 <video v-if="key == 0" :poster="item.image" :src="item.video" muted autoplay loop></video>
-                <!-- <PortafolioAppVideo v-if="key == 0" :video="item.video" :posterVideo="item.image"/> -->
                 <section class="content">
                     <div>
                         <h2>{{ item.name }}</h2>

@@ -16,10 +16,10 @@
           </label>
           <ul>
             <li>
-              <NuxtLink onclick="closeMenu" to="/" data-replace="Garnier"><span>Garnier</span></NuxtLink>
+              <NuxtLink to="/" data-replace="Garnier"><span>Garnier</span></NuxtLink>
             </li>
             <li>
-              <NuxtLink onclick="closeMenu" to="/insaltable" data-replace="Insaltable"><span>Insaltable</span></NuxtLink>
+              <NuxtLink to="/insaltable" data-replace="Insaltable"><span>Insaltable</span></NuxtLink>
             </li>
             <li>
               <a href="" data-replace="Clientes"><span>Clientes</span></a>
