@@ -59,19 +59,41 @@
         })
     );
 
+    onMounted(() => {
+        
+        const video : HTMLElement | undefined = document.querySelector('.video_home_container') as HTMLElement | undefined;
+        const heightScreen : number = window.innerHeight;
+
+        function resize(){
+            if(video){
+                video.style.height = `${heightScreen - 50}px`
+            }
+        }
+
+        resize();
+
+        window.onresize = () => {
+            resize();
+        }
+
+
+    });
+
 
 </script>
 
 <template>
     <div>
       <header>
-        <HomeAppVideo :videoMobile="data?.data.item.mobile_video" :videoDesk="data?.data.item.desktop_video" :posterVideo="data?.data.item.image_home"/>
+        <HomeAppVideo class="video_home_container" :videoMobile="data?.data.item.mobile_video" :videoDesk="data?.data.item.desktop_video" :posterVideo="data?.data.item.image_home"/>
         <!-- Marquee -->
-        <Vue3Marquee class="marquee_home" :clone="true" :duration="20">
-            <div v-for="(value, key) in data?.data.item.notices" :key="key"> 
-                <p>{{ value }}<span>-</span></p> 
-            </div>
-        </Vue3Marquee>
+        <section id="marquee_item">
+            <Vue3Marquee class="marquee_home" :clone="true" :duration="20">
+                <div v-for="(value, key) in data?.data.item.notices" :key="key"> 
+                    <p>{{ value }}<span>-</span></p> 
+                </div>
+            </Vue3Marquee>
+        </section>
       </header>
       <HomeAppSlider/>
       <section class="insaltable_link">
