@@ -2,15 +2,17 @@
 
     .video{
 
+        height: calc(90vh - 30px);
+
+        @include bp(mobileBIG){
+            height: calc(85vh - 30px);
+        }
+
         .video-js {
 
             width: 100%;
-            height: calc(90vh - 30px);
+            height: 100%;
             font-size: rem(10px);
-
-            @include bp(mobileBIG){
-                height: calc(85vh - 30px);
-            }
     
             @include bp(tablet){
                 font-size: rem(12px);
@@ -19,13 +21,13 @@
             @include bp(laptop){
                 font-size: rem(13px);
                 font-family: $font-bold;
-                height: calc(85vh - 30px);
+                // height: calc(85vh - 30px);
             }
 
             @include bp(escritorio){
                 font-size: rem(13px);
                 font-family: $font-bold;
-                height: calc(90vh - 30px);
+                // height: calc(90vh - 30px);
             }
     
             &:hover {

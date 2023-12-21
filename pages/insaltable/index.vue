@@ -13,7 +13,7 @@
         data: {
             status: string,
             items: {
-                items: AsyncDataPortafolio[]
+                items: AsyncDataPortafolio[] | undefined
             }
         }
     }
@@ -67,7 +67,8 @@
 <template>
     <div class="page portafolio">
         <h1>Portafolio Garnier BBDO</h1>
-        <section class="all">
+        <section v-if="data?.data.items" class="all">
+
             <NuxtLink v-for="(item, key) in data?.data.items.items" :key="key" :style="{backgroundImage: `url(${item.image})`}" :to="`/insaltable/${item.slug}`" :title="item.name">
                 <video v-if="key == 0" :poster="item.image" :src="item.video" muted autoplay loop></video>
                 <section class="content">
