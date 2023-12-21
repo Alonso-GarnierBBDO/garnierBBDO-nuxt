@@ -1,7 +1,7 @@
 
 <template>
     <div class="video_home" ref="videoHome">
-        <video id="video" class="video-js vjs-theme-city">
+        <video id="video" class="video-js vjs-theme-city" :poster="posterVideo">
             <source :src="width <= 550 ? videoMobile : videoDesk">
         </video>
     </div>
