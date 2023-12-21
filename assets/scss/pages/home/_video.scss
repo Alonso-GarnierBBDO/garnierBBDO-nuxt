@@ -1,27 +1,11 @@
 .video_home{
 
-    background-color: grey;
-
-    .video-garnier{
-        width: 100%;
-        height: calc(100vh - 50px);
-        font-size: rem(10px);
-
-        @include bp(tablet){
-            font-size: rem(12px);
-        }
-
-        @include bp(laptop){
-            font-size: rem(13px);
-            font-family: $font-bold;
-            height: calc(100vh - 50px);
-        }
-    }
+    height: calc(100vh - 50px);
 
     .video-js {
 
         width: 100%;
-        height: calc(100vh - 50px);
+        height: 100%;
         font-size: rem(10px);
 
         @include bp(tablet){

@@ -1,11 +1,9 @@
 
 <template>
-    <div class="video_home">
-        
-        <video src="" id="video" class="video-js vjs-theme-city">
-            <source src="//vjs.zencdn.net/v/oceans.mp4">
+    <div class="video_home" ref="videoHome">
+        <video id="video" class="video-js vjs-theme-city">
+            <source :src="width <= 550 ? videoMobile : videoDesk">
         </video>
-
     </div>
 </template>
 
@@ -25,7 +23,8 @@
         },
         data() {
             return {
-                video: this.videoDesk,
+                videoItem: this.videoDesk,
+                width: 0,
             }
         },
         methods:{
@@ -38,13 +37,23 @@
                     preload: true,
                 });
 
+            },
+
+            height_video(){
+
+                const element : HTMLElement = this.$refs.videoHome as HTMLElement;
+                const heightElement : number = window.innerHeight;
+                element.style.height = `${heightElement - 50}px`;
+
             }
+
         },
         mounted() {
 
-            this.video = window.innerWidth <= 550 ? this.videoMobile : this.videoDesk;
+            this.width = window.innerWidth;
 
             this.video_item();
+            this.height_video();
 
         },
 
