@@ -1,5 +1,5 @@
 <template>
-  <nav :class="`${routerName == 'index' || routerName == 'insaltable-slug' ? 'fixed' : ''} ${top ? 'top' : ''} ${bottom ? 'bottom' : ''}`">
+  <nav :class="`${routerName == 'clientes' ? 'white' : ''} ${routerName == 'index' || routerName == 'insaltable-slug' ? 'fixed' : ''} ${top ? 'top' : ''} ${bottom ? 'bottom' : ''}`">
     <div class="nav">
       <NuxtLink to="/" data-replace="Garnier" title="Inicio">
         <AppLogoGarnier />
@@ -22,7 +22,7 @@
               <NuxtLink to="/insaltable" data-replace="Insaltable" title="Insaltable"><span>Insaltable</span></NuxtLink>
             </li>
             <li>
-              <a href="" data-replace="Clientes" title="Clientes"><span>Clientes</span></a>
+              <NuxtLink to="/clientes" href="" data-replace="Clientes" title="Clientes"><span>Clientes</span></NuxtLink>
             </li>
             <li>
               <a href="" data-replace="Desde 1921" title="Desde 1921"><span>Desde 1921</span></a>
@@ -54,9 +54,27 @@
       const route = useRoute();
       let routerName : Ref<string | undefined> = ref(route.name?.toString());
 
+      const colorBackground = () => {
+        const htmlElement : HTMLElement | undefined = document.body as HTMLElement | undefined;
+        const router = useRoute().name;
+
+        if(router == 'clientes' && htmlElement){
+          htmlElement.classList.add('blue');
+        }else if(htmlElement){
+          htmlElement.classList.remove('blue');
+        }
+      } 
+
       watch(() => route.path, () => {
         routerName.value = route.name?.toString();
+        colorBackground();
+      });
+
+      onMounted( () =>{
+        colorBackground();
       })
+
+
 
       return {
         routerName
@@ -94,11 +112,16 @@
 
         }
       },
+      colorBackground(){
+        
+        
+
+
+      }
     },
     watch: {
       $route(to, from){
         const inputElement : HTMLInputElement  = this.$refs.checkMenu as HTMLInputElement;
-
         if(inputElement){
           inputElement.checked = false;
         }
@@ -107,6 +130,7 @@
     },
     mounted(){
       this.menuScroll();
+      // this.colorBackground();
     },
   }
 

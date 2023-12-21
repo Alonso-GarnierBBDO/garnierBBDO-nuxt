@@ -1,0 +1,69 @@
+.clientes{
+
+    .logos {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        grid-gap: 50px;
+
+        @include bp(mobileBIG){
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include bp(tabletMD){
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include bp(escritorio){
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        article {
+
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+
+            picture {
+
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+                @include bp(tablet){
+                    width: 60%;
+                }
+
+                @include bp(tabletMD){
+                    width: 50%;
+                }
+
+                @include bp(laptop){
+                    width: 40%;
+                }
+
+                @include bp(escritorio){
+                    width: 50%;
+                }
+
+                img  {
+                    width: 90%;
+                }
+
+            }
+
+            span {
+                margin-top: 15px;
+                color: $color-tres;
+                font-family: $font-regular;
+            }
+
+        }
+
+    }
+
+}

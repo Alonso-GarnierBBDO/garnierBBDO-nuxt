@@ -378,6 +378,36 @@ nav {
     }
 }
 
+nav.white{
+    
+    svg {
+        fill: $color-cuarto;
+    }
+
+    .items_menu{
+        div{
+            ul{
+                li{
+
+                    a{
+                        color: $color-cuarto;
+                    }
+
+                    a.router-link-active{
+                        color: $color-principal;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .menu{
+        color: $color-cuarto;
+    }
+
+}
+
 nav.fixed{
 
     position: fixed;

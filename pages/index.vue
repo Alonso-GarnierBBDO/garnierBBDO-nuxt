@@ -97,7 +97,7 @@
       </header>
       <HomeAppSlider/>
       <section class="insaltable_link">
-        <NuxtLink to="/insaltable">
+        <NuxtLink to="/insaltable" title="Ver más">
             <span class="text">
                 Ver más
             </span>
