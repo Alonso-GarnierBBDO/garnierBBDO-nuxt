@@ -70,7 +70,13 @@
         ],
     });
 
-    onMounted(() => {
+    onMounted(() => {   
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
         
         const titleMobile : HTMLElement | undefined = document.querySelector('.title') as HTMLElement | undefined;
         const topResponsive : HTMLElement | undefined = document.querySelector('.header') as HTMLElement | undefined;
