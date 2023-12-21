@@ -63,8 +63,10 @@
 
     .content{
 
-        display: flex;
-        column-gap: 30px;
+        @include bp(tabletMD){
+            display: flex;
+            column-gap: 30px;
+        }
 
     }
 
@@ -74,10 +76,10 @@
         font-size: rem(25px);
         font-family: $font-regular;
         color: $color-principal;
-        text-wrap: nowrap;
 
         @include bp(tablet){
             font-size: rem(27px);
+            text-wrap: nowrap;
         }
 
         @include bp(tabletMD){
