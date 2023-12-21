@@ -1,7 +1,19 @@
+
+<template>
+    <div class="video_portafolio">
+        <video id="video" class="video-js vjs-theme-city" :poster="posterVideo">
+            <source :src="videoItem">
+        </video>
+    </div>
+</template>
+
+
 <script lang="ts">
 
-    import videojs from 'video.js';
+import VideoJS from 'video.js';
     import 'video.js/dist/video-js.css';
+    // City
+    import '@videojs/themes/dist/city/index.css';
 
 
     export default{
@@ -12,51 +24,38 @@
         },
         data() {
             return {
-                player: null as any,
-                videoOptions: {
+                videoItem: this.video,
+                width: 0,
+            }
+        },
+        methods:{
+            
+            
+            video_item(){
+
+                VideoJS('#video', {
                     autoplay: false,
+                    muted: false,
                     controls: true,
                     loop: true,
-                    muted: false,
-                    poster: this.posterVideo,
-                    playsinline: true,
+                    preload: true,
                     sources: [
                         {
-                            src: this.video,
-                            type: 'video/webm',
-                        }
-                    ],
-                }
-            }
+                            src: this.videoItem,
+                            type: `video/${this.videoItem?.split('.').pop()}`
+                        }, 
+                    ]
+                });
+
+            },
+
         },
         mounted() {
 
-            const element : HTMLVideoElement = this.$refs.videoPlayer as HTMLVideoElement;
-
-            if(element){
-
-                this.player = videojs(element, this.videoOptions, () => {
-                    this.player.log('onPlayerReady', this);
-                });
-
-            }
+            this.video_item();
 
         },
-
-        beforeDestroy() {
-
-            if (this.player) {
-                this.player.dispose();
-            }
-        }
 
     }
 
 </script>
-
-
-<template>
-    <div class="video_portafolio">
-        <video ref="videoPlayer" class="video-js"></video>
-    </div>
-</template>
