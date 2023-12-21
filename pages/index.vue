@@ -19,7 +19,31 @@
             { 
                 name: 'description', 
                 content: 'Somos agencia de publicidad costarricense, fundada por Alberto H. Garnier en 1921, y parte del BBDO Worldwide Network desde 1985. A Costa Rican Advertising Agency, founded by Alberto H. Garnier in 1921, and part of the BBDO Worldwide Network since 1985.' 
-            }
+            },
+            { 
+                name: 'og:image', 
+                content: '/favicon.ico' 
+            },
+            { 
+                name: 'twitter:image', 
+                content: '/favicon.ico' 
+            },
+            { 
+                name: 'og:title', 
+                content: 'Garnier BBDO - Agencia de publicidad' 
+            },
+            { 
+                name: 'twitter:title', 
+                content: 'Garnier BBDO - Agencia de publicidad' 
+            },
+            { 
+                name: 'og:description', 
+                content: 'Somos agencia de publicidad costarricense, fundada por Alberto H. Garnier en 1921, y parte del BBDO Worldwide Network desde 1985. A Costa Rican Advertising Agency, founded by Alberto H. Garnier in 1921, and part of the BBDO Worldwide Network since 1985.' 
+            },
+            { 
+                name: 'twitter:description', 
+                content: 'Somos agencia de publicidad costarricense, fundada por Alberto H. Garnier en 1921, y parte del BBDO Worldwide Network desde 1985. A Costa Rican Advertising Agency, founded by Alberto H. Garnier in 1921, and part of the BBDO Worldwide Network since 1985.' 
+            },
         ],
     });
 

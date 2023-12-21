@@ -1,7 +1,7 @@
 
 <template>
     <div class="video_portafolio">
-        <video id="video" class="video-js vjs-theme-city" :poster="posterVideo">
+        <video id="video" ref="videoPortafolio" class="video-js vjs-theme-city" :poster="posterVideo">
             <source :src="videoItem">
         </video>
     </div>
@@ -33,7 +33,7 @@ import VideoJS from 'video.js';
             
             video_item(){
 
-                VideoJS('#video', {
+                VideoJS(this.$refs.videoPortafolio as HTMLElement, {
                     autoplay: false,
                     muted: false,
                     controls: true,

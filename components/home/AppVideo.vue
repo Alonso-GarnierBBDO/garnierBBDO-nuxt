@@ -1,7 +1,7 @@
 
 <template>
-    <div class="video_home" ref="videoHome">
-        <video id="video" class="video-js vjs-theme-city" :poster="posterVideo">
+    <div class="video_home">
+        <video id="video" ref="videoHome" class="video-js vjs-theme-city" :poster="posterVideo">
             <source :src="videoItem">
         </video>
     </div>
@@ -11,7 +11,6 @@
 
     import VideoJS from 'video.js';
     import 'video.js/dist/video-js.css';
-    // City
     import '@videojs/themes/dist/city/index.css';
 
     export default{
@@ -23,8 +22,8 @@
         },
         data() {
             return {
-                videoItem: this.videoDesk,
-                width: 0,
+                videoItem: this.videoDesk as string | undefined,
+                width: 0 as number,
             }
         },
         methods:{
@@ -37,8 +36,9 @@
                 
                 this.selectVideo();
 
-                VideoJS('#video', {
-                    autoplay: 'muted',
+                VideoJS(this.$refs.videoHome as HTMLElement, {
+                    autoplay: true,
+                    muted: true,
                     controls: true,
                     loop: true,
                     preload: true,

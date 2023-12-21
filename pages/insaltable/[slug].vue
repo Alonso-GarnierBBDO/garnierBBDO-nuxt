@@ -36,8 +36,6 @@
         )
     }
 
-    console.log(data.value?.data)
-
     useHead({
         title : `Garnier BBDO - ${data.value?.data.item.titulo}`,
         meta: [
