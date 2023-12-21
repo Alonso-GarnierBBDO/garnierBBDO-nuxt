@@ -71,14 +71,14 @@ import type { NuxtLink } from '#build/components';
             <SwiperSlide v-for="(item, key) in items" :key="key" class="trabajo_slider">
                 <section class="item">
                     <NuxtLink :title="item.name" :to="`/insaltable/${item.slug}`">
-                        <NuxtImg :src="item.image" />
+                        <NuxtImg :src="item.image" :alt="item.name"/>
                         <section>
                             <div>
-                                <h2>{{ item.name }}</h2>
-                                <span>{{ item.client }}</span>
+                                <h2 :title="item.name">{{ item.name }}</h2>
+                                <span :title="item.client">{{ item.client }}</span>
                             </div>
                             <div class="next">
-                                <button>
+                                <button title="Ingresar">
                                     <BootstrapIcon name="arrow-right" />
                                 </button>
                             </div>

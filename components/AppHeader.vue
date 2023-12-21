@@ -1,37 +1,37 @@
 <template>
   <nav :class="`${routerName == 'index' || routerName == 'insaltable-slug' ? 'fixed' : ''} ${top ? 'top' : ''} ${bottom ? 'bottom' : ''}`">
     <div class="nav">
-      <NuxtLink to="/" data-replace="Garnier">
+      <NuxtLink to="/" data-replace="Garnier" title="Inicio">
         <AppLogoGarnier />
       </NuxtLink>
       <input type="checkbox" ref="checkMenu" id="openMenu" />
-      <label for="openMenu" class="menu">
+      <label for="openMenu" class="menu" title="Abrir menu">
         <BootstrapIcon class="menu" name="list" />
       </label>
       <label for="openMenu" class="capa_exit"></label>
       <section class="items_menu">
         <div>
-          <label for="openMenu" class="exit">
+          <label for="openMenu" class="exit" title="Cerrar menu">
             <BootstrapIcon class="close" name="x-lg" />
           </label>
           <ul>
             <li>
-              <NuxtLink to="/" data-replace="Garnier"><span>Garnier</span></NuxtLink>
+              <NuxtLink to="/" data-replace="Garnier" title="Garnier"><span>Garnier</span></NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/insaltable" data-replace="Insaltable"><span>Insaltable</span></NuxtLink>
+              <NuxtLink to="/insaltable" data-replace="Insaltable" title="Insaltable"><span>Insaltable</span></NuxtLink>
             </li>
             <li>
-              <a href="" data-replace="Clientes"><span>Clientes</span></a>
+              <a href="" data-replace="Clientes" title="Clientes"><span>Clientes</span></a>
             </li>
             <li>
-              <a href="" data-replace="Desde 1921"><span>Desde 1921</span></a>
+              <a href="" data-replace="Desde 1921" title="Desde 1921"><span>Desde 1921</span></a>
             </li>
             <li>
-              <a href="" data-replace="Oportunidades"><span>Oportunidades</span></a>
+              <a href="" data-replace="Oportunidades" title="Oportunidades"><span>Oportunidades</span></a>
             </li>
             <li>
-              <a href="" data-replace="Blog"><span>Blog</span></a>
+              <a href="" data-replace="Blog" title="Blog"><span>Blog</span></a>
             </li>
             <!-- <li>
               <a href="">{{ routerName }}</a>

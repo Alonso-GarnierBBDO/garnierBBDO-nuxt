@@ -105,11 +105,11 @@
                 <video v-if="key == 0" :poster="item.image" :src="item.video" muted autoplay loop></video>
                 <section class="content">
                     <div>
-                        <h2>{{ item.name }}</h2>
-                        <span>{{ item.client }}</span>
+                        <h2 :title="item.name">{{ item.name }}</h2>
+                        <span :title="item.client">{{ item.client }}</span>
                     </div>
                     <div class="next">
-                        <button>
+                        <button title="Ingresar">
                             <BootstrapIcon name="arrow-right" />
                         </button>
                     </div>

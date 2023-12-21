@@ -116,7 +116,7 @@
             <div class="header">
                 <section class="title">
                     <h1 :title="data?.data.item.titulo">{{ data?.data.item.titulo }} </h1>
-                    <a href="#content">
+                    <a title="Ver más" href="#content">
                         <BootstrapIcon name="arrow-down" />
                     </a>
                 </section>
@@ -126,7 +126,7 @@
             </div>
             <section class="contenido" v-html="data?.data.item.content"></section>
             <section class="images">
-                <NuxtPicture v-for="(item, key) in data?.data.item.images" :key="key" format="avif,webp" :src="item" />
+                <NuxtPicture v-for="(item, key) in data?.data.item.images" :key="key" format="avif,webp" :src="item" :alt="item"/>
             </section>
         </section>
     </div>

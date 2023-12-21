@@ -38,41 +38,41 @@
         <hr>
         <section class="container_footer">
             <section class="social">
-                <a :href="data?.data.item.footer.linkedin" target="_blank" data-replace="Linkedin"><span>Linkedin</span></a>
-                <a :href="data?.data.item.footer.instagram" target="_blank" data-replace="Instagram"><span>Instagram</span></a>
-                <a :href="data?.data.item.footer.whatsapp" target="_blank" data-replace="Whatsapp"><span>Whatsapp</span></a>
+                <a title="Linkedin" :href="data?.data.item.footer.linkedin" target="_blank" data-replace="Linkedin"><span>Linkedin</span></a>
+                <a title="Instagram" :href="data?.data.item.footer.instagram" target="_blank" data-replace="Instagram"><span>Instagram</span></a>
+                <a title="Whatsapp" :href="data?.data.item.footer.whatsapp" target="_blank" data-replace="Whatsapp"><span>Whatsapp</span></a>
             </section>
             <div class="first" >
                 <section class="direction">
-                    <a :href="`mailto:${data?.data.item.footer.email_contact}`" :data-replace="data?.data.item.footer.email_contact">
+                    <a :title="data?.data.item.footer.email_contact" :href="`mailto:${data?.data.item.footer.email_contact}`" :data-replace="data?.data.item.footer.email_contact">
                         <span>{{ data?.data.item.footer.email_contact }}</span>
                     </a>
                     <span class="line"> / </span>
-                    <a :href="`tel:${data?.data.item.footer.phone}`" :data-replace="data?.data.item.footer.phone">
+                    <a :title="data?.data.item.footer.phone" :href="`tel:${data?.data.item.footer.phone}`" :data-replace="data?.data.item.footer.phone">
                         <span>{{ data?.data.item.footer.phone }}</span>
                     </a>
                 </section>
                 <section class="location">
-                    <p>Vía Lindora, Edificio BLP, piso 2. Pozos 10903, San José, Costa Rica</p>
+                    <p title="Vía Lindora, Edificio BLP, piso 2. Pozos 10903, San José, Costa Rica">Vía Lindora, Edificio BLP, piso 2. Pozos 10903, San José, Costa Rica</p>
                 </section>
             </div>
             <section class="logos">
-                <a href="https://www.esencialcostarica.com" target="_blank">
-                    <NuxtImg src="/img/esencial.webp" sizes="70px" />
+                <a title="Esencial Costa Rica" href="https://www.esencialcostarica.com" target="_blank">
+                    <NuxtImg src="/img/esencial.webp" alt="Esencial Costa Rica" sizes="70px" />
                 </a>
-                <a href="https://comunidad.cr" target="_blank">
-                    <NuxtImg src="/img/comunidad.webp" sizes="70px" />
+                <a title="Comunidad Costa Rica" href="https://comunidad.cr" target="_blank">
+                    <NuxtImg src="/img/comunidad.webp" sizes="70px" alt="Comunidad Costa Rica"/>
                 </a>
-                <a>
-                    <NuxtImg src="/img/declaracion.webp" sizes="70px" />
+                <a title="Declaración de San Jose">
+                    <NuxtImg src="/img/declaracion.webp" sizes="70px" alt="Declaración de San Jose"/>
                 </a>
-                <a>
-                    <NuxtImg src="/img/azul.webp" sizes="70px" />
+                <a title="Bandera Azul">
+                    <NuxtImg src="/img/azul.webp" sizes="70px" alt="Bandera Azul"/>
                 </a>
             </section>
             <section class="politicas">
                 <p>
-                    <a :href="data?.data.item.footer.politicas" target="_black">Políticas & Procedimientos</a> - <a :href="data?.data.item.footer.codigo" target="_black">Código de ética</a> <span>©1921 - {{ new Date().getFullYear()  }}</span>
+                    <a title="Políticas & Procedimientos" :href="data?.data.item.footer.politicas" target="_black">Políticas & Procedimientos</a> - <a :href="data?.data.item.footer.codigo" target="_black" title="Código de ética">Código de ética</a> <span>©1921 - {{ new Date().getFullYear()  }}</span>
                 </p>
             </section>
         </section>
