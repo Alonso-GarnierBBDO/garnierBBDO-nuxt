@@ -160,14 +160,6 @@
                     font-size: rem(17px);
                 }
 
-                @include bp(tabletMD){
-                    font-size: rem(17px);
-                }
-
-                @include bp(laptop){
-                    font-size: rem(17px);
-                }
-
             }
 
         }
@@ -180,14 +172,6 @@
             margin-bottom: 30px;
 
             @include bp(tablet){
-                font-size: rem(17px);
-            }
-
-            @include bp(tabletMD){
-                font-size: rem(17px);
-            }
-
-            @include bp(laptop){
                 font-size: rem(17px);
             }
 

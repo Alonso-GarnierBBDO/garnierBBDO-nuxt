@@ -1,21 +1,19 @@
 <script setup lang="ts">
 
-    interface AsyncDataClientes {
-        name: string,
-        year: string,
-        link: string,
-        image: string,
-    }
 
     interface AsyncDataResult {
         data: {
             status: string,
-            items: AsyncDataClientes[] | undefined
+            items: {
+                title: string,
+                photo: string,
+                description: string
+            }
         }
     }
 
     useHead({
-        title : 'Garnier BBDO - Nuestros clientes',
+        title : 'Garnier BBDO - Nuestra historia',
         meta: [
             { 
                 name: 'description', 
@@ -31,11 +29,11 @@
             },
             { 
                 name: 'og:title', 
-                content: 'Garnier BBDO - Nuestros clientes' 
+                content: 'Garnier BBDO - Nuestra historia' 
             },
             { 
                 name: 'twitter:title', 
-                content: 'Garnier BBDO - Nuestros clientes' 
+                content: 'Garnier BBDO - Nuestra historia' 
             },
             { 
                 name: 'og:description', 
@@ -49,28 +47,29 @@
     });
 
 
-    // Insaltable
     const { data } = await useAsyncData <AsyncDataResult> (
-        'empresas',
-        () => $fetch( `/api/empresas`, {
+        'about',
+        () => $fetch( `/api/about`, {
             method: 'GET',
             baseURL: 'https://admin.garnierbbdo.com',
         })
     );
 
+    console.log(data.value?.data.items);
+
 
 </script>
 
 <template>
-    <div class="page clientes">
 
-        <h1>Garnier BBDO - Clientes</h1>
-
-        <section class="logos">
-            <article v-for="(value, key) in data?.data.items" :key="key" :title="value.name">
-                <NuxtPicture :src="value.image" sizes="120px" :alt="value.name"/>
-                <span :title="`Desde ${value.year}`">Desde {{ value.year }} </span>
-            </article>
+    <div class="page desde-1921">
+        <section class="image">
+            <NuxtImg :src="data?.data.items.photo" :alt="data?.data.items.title" :title="data?.data.items.title"/>
         </section>
-    </div>
+        <section class="content">
+            <h1 :title="data?.data.items.title">{{ data?.data.items.title }}</h1>
+            <div class="description" v-html="data?.data.items.description"></div>
+        </section>
+    </div> 
+
 </template>

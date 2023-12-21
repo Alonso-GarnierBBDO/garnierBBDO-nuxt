@@ -25,7 +25,7 @@
               <NuxtLink to="/clientes" href="" data-replace="Clientes" title="Clientes"><span>Clientes</span></NuxtLink>
             </li>
             <li>
-              <a href="" data-replace="Desde 1921" title="Desde 1921"><span>Desde 1921</span></a>
+              <NuxtLink to="/desde-1921" href="" data-replace="Desde 1921" title="Desde 1921"><span>Desde 1921</span></NuxtLink>
             </li>
             <li>
               <a href="" data-replace="Oportunidades" title="Oportunidades"><span>Oportunidades</span></a>
