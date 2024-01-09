@@ -2,7 +2,9 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/assets/scss/global.scss'],
+  css: [
+    '~/assets/scss/global.scss',
+  ],
   modules: [
     'nuxt-bootstrap-icons',
     'nuxt-swiper',
@@ -29,5 +31,8 @@ export default defineNuxtConfig({
     alias: {
       unsplash: 'https://admin.garnierbbdo.com'
     }
+  },
+  swiper: {
+    modules: ['grid', 'autoplay', 'pagination']
   }
 })

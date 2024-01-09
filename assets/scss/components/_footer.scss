@@ -352,6 +352,12 @@ footer {
                 display: flex;
                 align-items: flex-end;
             }
+
+            br{
+                @include bp(tabletMD){
+                    display: none;
+                }
+            }
     
             p {
                 font-size: rem(16px);

@@ -1,0 +1,152 @@
+.oportunidades{
+
+    h1 {
+
+        font-size: rem(25px);
+        font-family: $font-regular;
+        color: $color-siete;
+        margin-bottom: 20px;
+        text-align: center;
+
+        @include bp(mobileBIG){
+            font-size: rem(35px);
+        }
+
+        @include bp(tablet){
+            font-size: rem(27px);
+            text-wrap: nowrap;
+        }
+
+        @include bp(tabletMD){
+            font-size: rem(28px);
+        }
+
+        @include bp(laptop){
+            font-size: rem(28px);
+        }
+
+    }
+
+    p{
+
+        font-family: $font-regular;
+        font-size: rem(16px);
+        color: $color-siete;
+        margin-top: 15px;
+
+        &:first-of-type{
+            margin-top: 0px;
+        }
+
+        @include bp(tablet){
+            font-size: rem(17px);
+        }
+    
+    }
+
+    .works{
+
+        margin-top: 30px;
+
+        .swiper-grid-column > .swiper-wrapper{
+            flex-direction: unset !important;
+        }
+
+        .item_slider{
+
+            margin-bottom: 15px;
+            margin-top: 0px !important;
+
+            @include bp(mobileBIG){
+                max-width: 100%;
+
+            }
+
+            &:last-of-type{
+                margin-bottom: 0px;
+            }
+
+            a {
+
+                background-color: $color-ocho;
+                display: block;
+                position: relative;
+                padding: 15px;
+                border-radius: 10px;
+                text-wrap: balance;
+
+                &:hover{
+
+                    background-color: $color-siete;
+
+                    h2,
+                    span,
+                    i {
+                        color: $color-cuarto;
+                    }
+
+                    button{
+                        border: 1px solid $color-cuarto;
+                    }
+
+                }
+
+                h2{
+                    text-align: left;
+                    color: $color-cinco;
+                    margin-bottom: 10px;
+                    font-size: rem(22px);
+                    font-family: $font-regular;
+                }
+
+                span{
+                    margin-bottom: 10px;
+                    display: block;
+                    font-family: $font-regular;
+                }
+
+                div{
+
+                    grid-gap: 10px;
+                    display: grid;
+                    grid-template-columns: 1fr 40px;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span{
+                        margin-bottom: 0px;
+                        display: block;
+                        font-family: $font-regular;
+                        text-wrap: balance;
+                    }
+
+                    button{
+
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 1px solid $color-cinco;
+                        background-color: transparent;
+                        display: block;
+                        position: relative;
+                        appearance: none;
+
+                        i {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: rem(20px);
+                            color: $color-cinco;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

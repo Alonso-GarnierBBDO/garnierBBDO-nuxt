@@ -55,8 +55,6 @@
         })
     );
 
-    console.log(data.value?.data.items);
-
 
 </script>
 

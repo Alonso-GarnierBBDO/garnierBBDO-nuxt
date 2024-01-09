@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { NuxtLink } from '#build/components';
+    import type { NuxtLink } from '#build/components';
 
 
     interface WorkItem {
@@ -10,6 +10,7 @@ import type { NuxtLink } from '#build/components';
     }
 
     export default{
+        
     data() {
         return {
             items: [] as WorkItem[],
@@ -60,7 +61,7 @@ import type { NuxtLink } from '#build/components';
     <div class="slider">
         <Swiper 
             v-on:resize="viewPerPage" 
-            :modules="[SwiperAutoplay]"
+            :modules="[SwiperAutoplay]" 
             :autoplay="{
                 delay: 2000,
                 disableOnInteraction: true,

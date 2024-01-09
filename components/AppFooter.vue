@@ -72,7 +72,7 @@
             </section>
             <section class="politicas">
                 <p>
-                    <a title="Políticas & Procedimientos" :href="data?.data.item.footer.politicas" target="_black">Políticas & Procedimientos</a> - <a :href="data?.data.item.footer.codigo" target="_black" title="Código de ética">Código de ética</a> <span>©1921 - {{ new Date().getFullYear()  }}</span>
+                    <a title="Políticas & Procedimientos" :href="data?.data.item.footer.politicas" target="_black">Políticas & Procedimientos</a> - <a :href="data?.data.item.footer.codigo" target="_black" title="Código de ética">Código de ética</a> <br/> <span>©1921 - {{ new Date().getFullYear()  }}</span>
                 </p>
             </section>
         </section>
