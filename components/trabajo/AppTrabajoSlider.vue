@@ -12,20 +12,33 @@
                 space: 0 as number,
                 touch: false,
                 grid: 10 as number,
+                clickable: true as boolean
             }
         },
         methods: {
 
             screen(){
                 
-                if(window.innerWidth > 550){
+                if(window.innerWidth >= 1600){
+                    this.columns = 3;
+                    this.space = 30;
+                    this.grid = 3;
+                    this.touch = true;
+                }else if(window.innerWidth >= 1100){
                     this.columns = 2;
                     this.space = 30;
-                    this.grid = 10 / 2;
+                    this.grid = 3;
                     this.touch = true;
-                    
+                }else if(window.innerWidth >= 550){
+                    this.columns = 2;
+                    this.space = 30;
+                    this.grid = 4;
+                    this.touch = true;
+                    this.clickable = false;
+                }else{
+                    this.columns = 1;
+                    this.clickable = false;
                 }
-
             }
 
         },
@@ -54,7 +67,7 @@
                 rows: grid,
             }"
             :pagination="{
-              clickable: true,
+              clickable: clickable,
             }"
             class="mySwiper"
         >

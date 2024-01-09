@@ -1,5 +1,31 @@
 .oportunidades{
 
+    @include bp(laptop){
+        display: grid;
+        grid-template-columns: 30% calc(70% - 50px);
+        grid-gap: 50px;
+        align-items: center;
+    }
+
+    .swiper-pagination {
+        bottom: 0px !important;
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .swiper-pagination-clickable .swiper-pagination-bullet{
+        border: 1px solid $color-two;
+        opacity: 1;
+        background-color: transparent;
+        width: 12px;
+        height: 12px;
+    }
+
+    .swiper-pagination-clickable .swiper-pagination-bullet-active{
+        background-color: $color-two;
+    }
+
     h1 {
 
         font-size: rem(25px);
@@ -13,16 +39,17 @@
         }
 
         @include bp(tablet){
-            font-size: rem(27px);
+            font-size: rem(38px);
             text-wrap: nowrap;
         }
 
         @include bp(tabletMD){
-            font-size: rem(28px);
+            font-size: rem(40px);
         }
 
         @include bp(laptop){
-            font-size: rem(28px);
+            font-size: rem(45px);
+            text-align: left;
         }
 
     }
@@ -48,8 +75,17 @@
 
         margin-top: 30px;
 
+        @include bp(laptop){
+            margin-top: 0px;
+        }
+
         .swiper-grid-column > .swiper-wrapper{
             flex-direction: unset !important;
+
+            @include bp(laptop){
+                padding-bottom: 20px;
+            }
+
         }
 
         .item_slider{
@@ -74,6 +110,7 @@
                 padding: 15px;
                 border-radius: 10px;
                 text-wrap: balance;
+                cursor: pointer;
 
                 &:hover{
 
@@ -97,12 +134,22 @@
                     margin-bottom: 10px;
                     font-size: rem(22px);
                     font-family: $font-regular;
+
+                    @include bp(laptop){
+                        font-size: rem(29px);
+                    }
+                
                 }
 
                 span{
                     margin-bottom: 10px;
                     display: block;
                     font-family: $font-regular;
+
+                    @include bp(laptop){
+                        font-size: rem(18px);
+                    }
+
                 }
 
                 div{
@@ -130,6 +177,7 @@
                         display: block;
                         position: relative;
                         appearance: none;
+                        cursor: pointer;
 
                         i {
                             display: flex;
