@@ -4,18 +4,54 @@
     import 'swiper/css/grid';
     import 'swiper/css';
 
-    export default{
+    interface AsyncDataOportunidades {
+        jornada: string,
+        lugar: string,
+        name: string,
+        slug: string,
+        subtitle: string,
+    }
 
+    interface AsyncDataResult {
+        data: {
+            status: string,
+            items: AsyncDataOportunidades[]
+        }
+    }
+
+    export default{
+        name: 'Slider Oportunidades',
+        props: {
+            data: {
+                type: Object as () => AsyncDataOportunidades[] | null,
+                required: false,
+            }
+        },
         data(){
             return{
                 columns: 1 as number,
                 space: 0 as number,
                 touch: false,
                 grid: 10 as number,
-                clickable: true as boolean
+                clickable: true as boolean,
+                jsonData: [] as AsyncDataOportunidades[],
             }
         },
         methods: {
+
+            setValues(){
+
+                if(this.data){
+                    this.jsonData = this.data;
+
+                    this.screen();
+
+                    window.onresize = () => {
+                        this.screen();
+                    }
+                }
+
+            },
 
             screen(){
                 
@@ -38,24 +74,23 @@
                 }else{
                     this.columns = 1;
                     this.clickable = false;
+                    // this.grid = this.jsonData.length;
                 }
+            },
+            getAllWorks(){
+
+
             }
 
         },
         mounted(){
-            this.screen();
-
-            window.onresize = () => {
-                this.screen();
-            }
-
+            this.setValues();
         }
 
     }
 
-</script>
 
-<!-- :slides-per-view="2" -->
+</script>
 
 <template>
     <section class="works">
@@ -71,205 +106,18 @@
             }"
             class="mySwiper"
         >
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
+            <SwiperSlide v-for="item in jsonData" class="item_slider">
+                <NuxtLink class="item" :to="`oportunidades/${item.slug}`">
+                    <h2>{{ item.name }}</h2>
+                    <span>{{ item.subtitle }}</span>
                     <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
+                        <span>{{ item.lugar }} - <strong>{{ item.jornada }}</strong></span>
                         <button>
-                            <BootstrapIcon name="arrow-right" />
+                            <BootstrapIcon name="arrow-right" />    
                         </button>
                     </div>
                 </NuxtLink>
             </SwiperSlide>
-
-            <!-- --------------------------------------------------------------------------------- -->
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-            <SwiperSlide class="item_slider">
-                <NuxtLink class="item">
-                    <h2>Ejecutivo/a de cuentas</h2>
-                    <span>Publicidad</span>
-                    <div>
-                        <span>Santa Ana, San Jose, Costa Rica - <strong>Hidrido</strong></span>
-                        <button>
-                            <BootstrapIcon name="arrow-right" />
-                        </button>
-                    </div>
-                </NuxtLink>
-            </SwiperSlide>
-
-
-            <!-- --------------------------------------------------------------------------------- -->
 
 
         </Swiper>

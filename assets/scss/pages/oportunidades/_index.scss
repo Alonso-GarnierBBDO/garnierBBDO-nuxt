@@ -82,7 +82,7 @@
         .swiper-grid-column > .swiper-wrapper{
             flex-direction: unset !important;
 
-            @include bp(laptop){
+            @include bp(mobileBIG){
                 padding-bottom: 20px;
             }
 
@@ -111,6 +111,8 @@
                 border-radius: 10px;
                 text-wrap: balance;
                 cursor: pointer;
+                text-decoration: none;
+                color: $color-cinco;
 
                 &:hover{
 
