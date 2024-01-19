@@ -214,6 +214,19 @@
 
         form {
 
+            display: flex;
+            flex-flow: column;
+
+            .allError {
+
+                font-size: rem(18px);
+                margin-top: 5px;
+                color: $color-principal;
+                font-family: $font-regular;
+                font-weight: bold;
+
+            }
+
             label {
 
                 margin-bottom: 15px;
@@ -297,10 +310,56 @@
 
             .error {
 
-                font-size: rem(15px);
-                margin-top: 10px;
-                font-family: $font-regular;
+                font-size: rem(18px);
+                margin-top: 5px;
                 color: $color-principal;
+                font-family: $font-regular;
+                font-weight: bold;
+
+            }
+
+            .cvContainer {
+
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                column-gap: 20px;
+
+                i {
+                    font-size: rem(30px);
+                    color: $color-diez;
+                }
+
+                section{
+
+                    display: flex;
+                    flex-flow: column;
+
+                    .nameFile,
+                    strong {
+
+                        color: $color-siete;
+                        font-size: rem(18px);
+
+                    }
+
+                    strong {
+
+                        margin-top: 3px;
+                        font-weight: lighter;
+                        font-family: $font-regular;
+
+                    }
+
+                    .nameFile {
+
+                        margin-top: 5px;
+                        font-family: $font-regular;
+                        font-weight: bold;
+
+                    }
+
+                }
 
             }
 
