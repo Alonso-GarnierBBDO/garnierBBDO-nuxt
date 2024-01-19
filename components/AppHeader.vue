@@ -30,9 +30,9 @@
             <li>
               <NuxtLink to="/oportunidades" data-replace="Oportunidades" title="Oportunidades"><span>Oportunidades</span></NuxtLink>
             </li>
-            <li>
+            <!-- <li>
               <a href="" data-replace="Blog" title="Blog"><span>Blog</span></a>
-            </li>
+            </li> -->
             <!-- <li>
               <a href="">{{ routerName }}</a>
             </li> -->

@@ -1,0 +1,312 @@
+.oportunidad_laboral{
+
+    @include bp(tabletMD){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+    @include bp(escritorio){
+        grid-gap: 50px;
+    }
+
+
+    .content {
+
+        .header {
+
+            @include bp(tablet){
+                display: grid;
+                grid-template-columns: auto auto;
+                margin-bottom: 20px;
+            }
+
+            .title{
+             
+                @include bp(tablet){
+                    grid-area: 1;
+                }
+
+            }
+
+            .subtitle {
+
+                margin-bottom: 20px;
+                text-align: right;
+
+                @include bp(tabletMD){
+                    margin-bottom: 0px;
+                }
+
+
+                h2,
+                span {
+                    font-family: $font-regular;
+                }
+
+                h2 {
+                    font-size: rem(22px);
+                    color: $color-two;
+
+                    @include bp(tabletMD){
+                        font-size: rem(25px);
+                    }
+            
+                    @include bp(laptop){
+                        font-size: rem(28px);
+                    }
+
+                }
+ 
+                span {
+                    font-size: rem(17px);
+                    color: $color-cinco;
+
+                    @include bp(tabletMD){
+                        font-size: rem(20px);
+                    }
+            
+                    @include bp(laptop){
+                        font-size: rem(23px);
+                    }
+
+                }
+
+            }
+
+            h1 {
+
+                font-size: rem(30px);
+                margin-bottom: 20px;
+                font-family: $font-regular;
+                color: $color-two;
+                text-wrap: balance;
+
+                @include bp(tablet){
+                    font-size: rem(38px);
+                    margin-bottom: 0px;
+                }
+        
+                @include bp(tabletMD){
+                    font-size: rem(40px);
+                }
+        
+                @include bp(laptop){
+                    font-size: rem(45px);
+                    line-height: 37px;
+                }
+
+            }
+
+        }
+
+        .group {
+
+            @include bp(laptop){
+                display: grid;
+                grid-template-columns: 40% 60%;
+                margin-top: 30px;
+            }
+
+            @include bp(escritorio){
+                grid-template-columns: 30% 70%;
+                margin-top: 40px;
+            }
+
+            h3 {
+
+                font-size: rem(23);
+                margin-bottom: 15px;
+                margin-top: 15px;
+                font-family: $font-regular;
+                color: $color-two;
+
+                @include bp(laptop){
+                    margin-top: 0px;
+                    font-size: rem(25);
+                }
+
+                @include bp(escritorio){
+                    margin-top: 0px;
+                    font-size: rem(28);
+                }
+
+            }
+
+            &:nth-of-type(2) {
+
+                @include bp(laptop){
+                    margin-top: 0px;
+                    grid-template-columns: 100%;
+                }
+
+                @include bp(escritorio){
+                    grid-template-columns: 100%;
+                }
+
+                h3 {
+                    margin-top: 0px;
+                    margin-bottom: 15px;
+                }
+
+            }
+
+            .info {
+
+                font-family: $font-regular;
+                font-size: rem(16px);
+                color: $color-nueve;
+                width: 90%;
+                margin-left: 10%;
+                text-wrap: pretty;
+
+                @include bp(tablet){
+                    font-size: rem(17px);
+                }
+
+                @include bp(laptop){
+                    width: calc(100% - 20px);
+                    margin-left: 20px;
+                }
+
+                li,
+                p{
+                    margin-bottom: 10px;
+
+                    &:last-of-type{
+                        margin-bottom: 0px;
+                    }
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+    .formulario{
+
+        margin-top: 20px;
+
+        @include bp(tabletMD){
+            margin-top: 0px;   
+        }
+
+        h4 {
+
+            font-size: rem(23);
+            color: $color-two;
+            font-family: $font-regular;
+            margin-bottom: 20px;
+
+            @include bp(laptop){
+                font-size: rem(25);
+            }
+
+            @include bp(escritorio){
+                font-size: rem(28);
+            }
+
+
+        }
+
+        form {
+
+            label {
+
+                margin-bottom: 15px;
+                display: flex;
+                flex-flow: column;
+                position: relative;
+                transition: .3s ease;
+
+                h4 {
+                    margin-bottom: 0px;
+                }
+
+                p {
+
+                    color: $color-diez;
+                    font-size: rem(17px);
+                    font-family: $font-regular;
+                    position: absolute;
+                    transition: .3s ease;
+                    cursor: text;
+
+                }
+
+                p.focus{
+                    font-size: rem(16px);
+                }
+
+                input {
+
+                    padding: 10px 0px;
+                    width: calc(100% - 24px);
+                    font-size: rem(17px);
+                    font-family: $font-regular;
+                    border: none;
+                    outline: none;
+                    border-bottom: 1px solid $color-diez;
+                    color: $color-once;
+
+                    &::placeholder{
+                        color: $color-diez;
+                    }
+
+                }
+
+                input[type="file"]{
+                    display: none;
+                }
+
+    
+            }
+
+            label:focus-within p{
+                font-size: rem(16px);
+            }
+
+            label#upload{
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                i {
+
+                    font-size: rem(25px);
+                    color: $color-diez;
+
+                }
+
+                strong {
+
+                    margin-top: 7px;
+                    display: block;
+                    font-family: $font-regular;
+                    font-weight: lighter;
+                    font-size: rem(17px);
+
+                }
+
+
+            }
+
+            .error {
+
+                font-size: rem(15px);
+                margin-top: 10px;
+                font-family: $font-regular;
+                color: $color-principal;
+
+            }
+
+
+        }
+
+    }
+
+}
