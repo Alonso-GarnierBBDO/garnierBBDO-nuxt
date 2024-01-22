@@ -106,6 +106,6 @@
                 <section class="info" v-html="dataPuesto?.requisitos"></section>
             </section>
         </section>
-        <TrabajoAppFormulario :title="dataPuesto?.name"/>
+        <!--<TrabajoAppFormulario :title="dataPuesto?.name"/>-->
     </section>
 </template>
