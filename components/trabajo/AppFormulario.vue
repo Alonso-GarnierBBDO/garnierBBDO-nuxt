@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <section class="formulario">
         <h4>Aplicá aquí :)</h4>
         <form action="" v-on:submit.prevent="(e : Event) => sendCV(e)">
@@ -470,4 +470,4 @@
 
     }
 
-</script>
+</script> -->
