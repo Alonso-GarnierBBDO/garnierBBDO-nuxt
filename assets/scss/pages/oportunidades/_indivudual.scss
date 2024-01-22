@@ -234,7 +234,7 @@
 
             .allError {
 
-                font-size: rem(17px);
+                font-size: rem(18px);
                 margin-top: 5px;
                 color: $color-principal;
                 font-family: $font-regular;
@@ -345,7 +345,7 @@
 
             .error {
 
-                font-size: rem(16px);
+                font-size: rem(18px);
                 margin-top: 5px;
                 color: $color-principal;
                 font-family: $font-regular;
@@ -358,9 +358,7 @@
                 display: flex;
                 flex-flow: row;
                 align-items: center;
-                justify-content: space-between;
                 column-gap: 20px;
-                cursor: pointer;
 
                 i {
                     font-size: rem(30px);
