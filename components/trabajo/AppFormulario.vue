@@ -1,4 +1,5 @@
 <template>
+    <!--
     <section class="formulario">
         <h4>Aplicá aquí :)</h4>
         <form action="" v-on:submit.prevent="(e : Event) => sendCV(e)">
@@ -77,11 +78,12 @@
             </section>
         </section>
     </section>
+    -->
 </template>
 
 
 <script lang="ts">
-
+    /*
     import postWord from '@/hooks/api';
 
     export default{
@@ -468,5 +470,7 @@
         }
 
     }
+
+    */
 
 </script>
