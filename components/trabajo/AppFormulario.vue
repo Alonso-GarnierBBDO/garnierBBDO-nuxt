@@ -81,7 +81,7 @@
 
 
 <script lang="ts">
-    import postWord from '@/hooks/api';
+    // import postWord from '@/hooks/api';
 
     export default{
         props: {
@@ -311,7 +311,9 @@
                     this.button = 'Enviando aplicación';
 
 
-                    const response = await postWord(formData);
+                    // const response = await postWord(formData);
+
+                    const response = 200;
 
                     inputs.forEach( e => {
                         e.disabled = false;
