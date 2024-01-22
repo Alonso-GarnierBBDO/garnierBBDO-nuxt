@@ -77,6 +77,7 @@
 
     const dataPuesto = data.value?.data.items;
 
+
 </script>
 
 

@@ -54,19 +54,36 @@
                 <input @change="changeFIle" type="file" id="cv" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/msword, text/plain, text/rtf">
             </label>
 
-            <button type="submit">
+            <button type="submit" class="send" :disabled="disabledElement">
                 {{button}}
-                <BootstrapIcon class="close" name="arrow-right"/>
+                <BootstrapIcon class="arrow" name="arrow-right"/>
+                <span class="loader"></span>
             </button>
 
             <span class="allError">{{ error }}</span>
 
         </form>
+        <section v-if="openModal" class="modal" v-on:click="showModal()">
+            <section class="content" v-on:click="(e) => e.stopPropagation()">
+                <img src="../../assets/img/volcan_logo.svg" class="logo_volcan" alt="Logo del premio volcan">
+                <button class="close" v-on:click="showModal()">
+                    <BootstrapIcon class="arrow" name="x-lg"/>
+                </button>
+                <section>
+                    <h2>¡Felicidades, su solicitud se envió con éxito!</h2>
+                    <p>Si su perfil coincide con la vacante pronto nos pondremos con contacto.</p>
+                    <button v-on:click="showModal()">Aceptar y cerrar</button>
+                </section>
+            </section>
+        </section>
     </section>
 </template>
 
 
 <script lang="ts">
+
+    import postWord from '@/hooks/api';
+import { MagicString } from 'vue/compiler-sfc';
 
     export default{
         props: {
@@ -84,10 +101,19 @@
                     portafolio: null as string | null,
                 },
                 error: '',
-                button: 'Enviá tu aplicación'
+                button: 'Enviá tu aplicación',
+                disabledElement: false,
+                openModal: false,
             }
         },
         methods: {
+
+            showModal(){
+
+                this.openModal = false;
+                document.body.style.overflow = 'auto';
+
+            },
 
             alingMenu(){
 
@@ -254,7 +280,7 @@
                         type: selectedFile.type,
                     });
 
-                    const formData = new FormData();
+                    const formData : FormData = new FormData();
 
                     formData.append('name', this.form.name);
                     formData.append('last_name', this.form.lastName);
@@ -277,26 +303,65 @@
                     
                     formData.append("cv", updatedFile);
 
-                    await fetch(`https://admin.garnierbbdo.com/api/nuevo-empleo`, {
-                        method: "POST",
-                        // body: formData,
-                    }).then((res) => {
+                    const inputs : NodeListOf<HTMLInputElement> = document.querySelectorAll("form input");
 
-                        this.button = 'Enviá tu aplicación';
-
-                        if(res.status != 200){
-                            this.error = '';
-                        }else {
-                            this.error = 'Ocurrio un problema al enviar la aplicación';
-                        }
-
-                        console.log(res)
-
-                        // return res.json().then( data => {
-                        //     console.log(data);
-                        // })
-
+                    inputs.forEach( e => {
+                        e.disabled = true;
                     });
+
+                    this.disabledElement = true;
+                    this.button = 'Enviando aplicación';
+
+
+                    const response = await postWord(formData);
+
+                    inputs.forEach( e => {
+                        e.disabled = false;
+                    });
+
+                    this.disabledElement = false;
+                    this.button = 'Enviá tu aplicación';
+                    this.openModal = true;
+                    document.body.style.overflow = 'hidden';
+
+
+                    if(response == 200){
+
+                        const inputNameFile : HTMLSpanElement = document.querySelector('.nameFile') as HTMLSpanElement;
+                        inputNameFile.innerHTML = '';
+                        this.error = "";
+
+                        inputs.forEach( e => {
+
+                            const parentElement : HTMLLabelElement = e.parentElement as HTMLLabelElement;
+                            const childElement : HTMLParagraphElement | null = parentElement.querySelector('p');
+
+                            parentElement.style.marginTop = '0px';
+
+                            if(childElement){
+                                childElement.classList.remove('focus');
+                            }
+
+
+
+                            e.value = '';
+                            
+                        });
+
+                        this.form.name = '';
+                        this.form.lastName = '';
+                        this.form.email = '';
+                        this.form.linkedin = '';
+                        this.form.portafolio = '';
+
+                        this.alingMenu();
+
+
+
+                    }else{
+                        this.error = "Ocurrió un error al  enviar su solicitud, por favor inténtelo más tarde";
+                    }
+
 
                 }else{
                     this.error = 'Algunos items estan incorrectos';
@@ -346,8 +411,8 @@
                             // Aqui el archivo entra si la extension no es valida entonces le indicamos al usuairo
                             // Entonces le cambiamos el color a rojo y le indicamos usuario
 
-                            inputNameFile.innerHTML = 'Este archivo no es permitido';
-                            errorFile.innerHTML = 'El archivo no puede pesar más de 1MB';
+                            inputNameFile.innerHTML = '';
+                            errorFile.innerHTML = 'Este archivo no es permitido';
                             this.form.file = null;
 
                         }

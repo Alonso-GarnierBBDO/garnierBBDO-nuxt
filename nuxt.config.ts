@@ -25,6 +25,10 @@ export default defineNuxtConfig({
       'xxl': 1536,
       '2xl': 1536
     },
+    // sanctum: {
+    //     baseUrl: 'http://127.0.0.1:8000', // Laravel API
+    //     origin: 'http://localhost:3000', // Nuxt app
+    // },
     domains: [
       'admin.garnierbbdo.com'
     ],
