@@ -190,8 +190,27 @@
 
         margin-top: 20px;
 
+        @include bp(mobileBIG){
+            margin: 20px auto auto;
+            max-width: 550px;
+        }
+
         @include bp(tabletMD){
             margin-top: 0px;   
+            position: sticky;
+            top: 10px;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @include bp(laptop){
+            max-width: 500px;
+            top: 35px;
+        }
+
+        @include bp(escritorio){
+            top: 70px;
+            max-width: 600px;
         }
 
         h4 {
@@ -199,14 +218,10 @@
             font-size: rem(23);
             color: $color-two;
             font-family: $font-regular;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
 
             @include bp(laptop){
-                font-size: rem(25);
-            }
-
-            @include bp(escritorio){
-                font-size: rem(28);
+                font-size: rem(29);
             }
 
 
@@ -219,7 +234,7 @@
 
             .allError {
 
-                font-size: rem(18px);
+                font-size: rem(17px);
                 margin-top: 5px;
                 color: $color-principal;
                 font-family: $font-regular;
@@ -248,16 +263,24 @@
                     transition: .3s ease;
                     cursor: text;
 
+                    @include bp(tablet){
+                        font-size: rem(18px);
+                    }
+
                 }
 
                 p.focus{
                     font-size: rem(16px);
+
+                    @include bp(tablet){
+                        font-size: rem(17px);
+                    }
                 }
 
                 input {
 
                     padding: 10px 0px;
-                    width: calc(100% - 24px);
+                    width: 100%;
                     font-size: rem(17px);
                     font-family: $font-regular;
                     border: none;
@@ -266,6 +289,11 @@
                     color: $color-once;
                     opacity: 1;
                     transition: .2s ease;
+                    border-radius: 0px;
+
+                    @include bp(tablet){
+                        font-size: rem(18px);
+                    }
 
                     &::placeholder{
                         color: $color-diez;
@@ -332,6 +360,7 @@
                 align-items: center;
                 justify-content: space-between;
                 column-gap: 20px;
+                cursor: pointer;
 
                 i {
                     font-size: rem(30px);
@@ -385,6 +414,15 @@
                 font-family: $font-regular;
                 background-color: transparent;
                 opacity: 1;
+                cursor: pointer;
+
+                @include bp(mobileBIG){
+                    max-width: 250px;
+                }
+
+                @include bp(tablet){
+                    font-size: rem(18px);
+                }
 
                 &:hover,
                 &:disabled {
@@ -479,6 +517,14 @@
                 width: 90%;
                 border-radius: 15px;
 
+                @include bp(mobileBIG){
+                    max-width: 500px;
+                }
+
+                @include bp(tablet){
+                    max-width: 600px;
+                }
+
                 .logo_volcan {
                     position: absolute;
                     top: 0px;
@@ -502,6 +548,7 @@
                     border: none;
                     background-color: transparent;
                     z-index: 999;
+                    cursor: pointer;
 
                     i {
                         font-size: rem(25px);
@@ -522,21 +569,39 @@
 
                     h2 {
 
-                        font-size: rem(38);
+                        font-size: rem(30px);
                         font-family: $font-bold;
                         line-height: 40px;
                         color: $color-cuarto;
                         text-wrap: balance;
                         margin-bottom: 10px;
 
+                        @include bp(tablet){
+                            font-size: rem(38px);
+                        }
+                
+                        @include bp(tabletMD){
+                            font-size: rem(40px);
+                        }
+                
+                        @include bp(laptop){
+                            font-size: rem(45px);
+                            line-height: 50px;
+                        }
+
                     }
 
                     p {
 
-                        font-size: rem(18px);
+                        font-size: rem(16px);
                         font-family: $font-regular;
                         color: $color-cuarto;
                         margin-bottom: 20px;
+                        text-align: left;
+
+                        @include bp(tablet){
+                            font-size: rem(17px);
+                        }
 
                     }
 
@@ -550,6 +615,7 @@
                         color: $color-cuarto;
                         font-weight: bold;
                         font-size: rem(16);
+                        cursor: pointer;
 
                         &:hover{
                             background-color: $color-cuarto;

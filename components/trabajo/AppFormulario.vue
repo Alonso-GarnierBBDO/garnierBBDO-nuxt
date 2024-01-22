@@ -83,7 +83,6 @@
 <script lang="ts">
 
     import postWord from '@/hooks/api';
-import { MagicString } from 'vue/compiler-sfc';
 
     export default{
         props: {
@@ -321,8 +320,6 @@ import { MagicString } from 'vue/compiler-sfc';
 
                     this.disabledElement = false;
                     this.button = 'Enviá tu aplicación';
-                    this.openModal = true;
-                    document.body.style.overflow = 'hidden';
 
 
                     if(response == 200){
@@ -330,6 +327,8 @@ import { MagicString } from 'vue/compiler-sfc';
                         const inputNameFile : HTMLSpanElement = document.querySelector('.nameFile') as HTMLSpanElement;
                         inputNameFile.innerHTML = '';
                         this.error = "";
+                        this.openModal = true;
+                        document.body.style.overflow = 'hidden';
 
                         inputs.forEach( e => {
 
@@ -359,7 +358,8 @@ import { MagicString } from 'vue/compiler-sfc';
 
 
                     }else{
-                        this.error = "Ocurrió un error al  enviar su solicitud, por favor inténtelo más tarde";
+                        this.error = "Ocurrió un error al  enviar su solicitud, por favor inténtelo más tarde.";
+                        this.openModal = false;
                     }
 
 
