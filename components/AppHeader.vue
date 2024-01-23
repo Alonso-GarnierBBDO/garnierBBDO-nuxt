@@ -22,20 +22,14 @@
               <NuxtLink to="/insaltable" data-replace="Insaltable" title="Insaltable"><span>Insaltable</span></NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/clientes" href="" data-replace="Clientes" title="Clientes"><span>Clientes</span></NuxtLink>
+              <NuxtLink to="/clientes" data-replace="Clientes" title="Clientes"><span>Clientes</span></NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/desde-1921" href="" data-replace="Desde 1921" title="Desde 1921"><span>Desde 1921</span></NuxtLink>
+              <NuxtLink to="/desde-1921" data-replace="Desde 1921" title="Desde 1921"><span>Desde 1921</span></NuxtLink>
             </li>
             <li>
               <NuxtLink to="/oportunidades" data-replace="Oportunidades" title="Oportunidades"><span>Oportunidades</span></NuxtLink>
             </li>
-            <!-- <li>
-              <a href="" data-replace="Blog" title="Blog"><span>Blog</span></a>
-            </li> -->
-            <!-- <li>
-              <a href="">{{ routerName }}</a>
-            </li> -->
           </ul>
         </div>
       </section>

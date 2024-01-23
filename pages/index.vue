@@ -88,11 +88,7 @@
         <HomeAppVideo class="video_home_container" :videoMobile="data?.data.item.mobile_video" :videoDesk="data?.data.item.desktop_video" :posterVideo="data?.data.item.image_home"/>
         <!-- Marquee -->
         <section id="marquee_item">
-            <Vue3Marquee class="marquee_home" :clone="true" :duration="20">
-                <div v-for="(value, key) in data?.data.item.notices" :key="key"> 
-                    <p>{{ value }}<span>-</span></p> 
-                </div>
-            </Vue3Marquee>
+            <HomeAppMarquee :data="data?.data.item.notices"/>
         </section>
       </header>
       <HomeAppSlider/>

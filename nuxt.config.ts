@@ -10,8 +10,9 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     '@nuxt/image',
   ],
+  components: true,
   plugins: [
-    '~/plugins/marquee/Vue3Marquee.client',
+    '~/plugins/Vue3Marquee.client.ts',
   ],
   image: {
     quality: 80,
