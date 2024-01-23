@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
@@ -12,7 +14,7 @@ export default defineNuxtConfig({
   ],
   components: true,
   plugins: [
-    '~/plugins/Vue3Marquee.client.ts',
+    //'~/plugins/Vue3Marquee.client.ts',
   ],
   image: {
     quality: 80,

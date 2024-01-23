@@ -85,7 +85,9 @@
 <template>
     <div>
       <header>
-        <HomeAppVideo class="video_home_container" :videoMobile="data?.data.item.mobile_video" :videoDesk="data?.data.item.desktop_video" :posterVideo="data?.data.item.image_home"/>
+        <ClientOnly>
+            <HomeAppVideo class="video_home_container" :videoMobile="data?.data.item.mobile_video" :videoDesk="data?.data.item.desktop_video" :posterVideo="data?.data.item.image_home"/>
+        </ClientOnly>
         <!-- Marquee -->
         <section id="marquee_item">
             <HomeAppMarquee :data="data?.data.item.notices"/>

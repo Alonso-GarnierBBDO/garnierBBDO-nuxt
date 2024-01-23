@@ -36,6 +36,7 @@
                 
                 this.selectVideo();
 
+                
                 VideoJS(this.$refs.videoHome as HTMLElement, {
                     autoplay: true,
                     muted: true,
@@ -52,23 +53,11 @@
 
             },
 
-            height_video(){
-
-                // const element : HTMLElement = this.$refs.videoHome as HTMLElement;
-                // const heightElement : number = window.innerHeight;
-                // element.style.height = `${heightElement - 50}px`;
-
-            }
 
         },
         mounted() {
 
             this.video_item();
-            this.height_video();
-
-            window.onresize = () => {
-                this.height_video();
-            }
 
         },
 
