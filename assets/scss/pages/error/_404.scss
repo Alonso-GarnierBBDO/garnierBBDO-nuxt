@@ -1,0 +1,64 @@
+.container_404{
+
+    min-height: 50dvh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      font-size: rem(80px);
+      font-family: $font-go-bold;
+      margin-bottom: 10px;
+      color: $color-principal;
+
+      @include bp(tablet){
+        font-size: rem(130px);
+      }
+
+    }
+
+    p{
+
+      font-family: $font-din-regular;
+      font-size: rem(25px);
+      margin-bottom: 10px;
+      color: $color-two;
+      display: block;
+      position: relative;
+
+      @include bp(tablet){
+        font-size: rem(35px);
+      }
+
+
+    }
+
+    a {
+
+      font-size: rem(20px);
+      background-color: $color-two;
+      color: $color-cuarto;
+      border-radius: 40px;
+      padding: 10px 30px;
+      margin-top: 30px;
+      display: inline-block;
+      text-decoration: none;
+      font-family: $font-din-regular;
+      position: relative;
+
+      &:hover{
+        color: $color-two;
+        background-color: $color-tres;
+      }
+
+      @include bp(tablet){
+        font-size: rem(25px);
+        padding: 10px 25px;
+        width: 230px;
+      }
+
+    }
+
+}
