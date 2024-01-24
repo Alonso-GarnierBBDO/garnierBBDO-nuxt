@@ -418,7 +418,7 @@ body.blue {
             .logos {
                 a {
                     img{
-                        filter: grayscale(0);
+                        filter: brightness(0) invert(1);
                         opacity: 1;
                     }
                 }
