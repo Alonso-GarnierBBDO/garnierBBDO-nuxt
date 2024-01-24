@@ -26,9 +26,9 @@
         mounted(){
 
             const showModal = window.localStorage.getItem('modal');
-            document.body.style.overflow = 'hidden';
             if(!showModal){
                 this.view = true;
+                document.body.style.overflow = 'hidden';
             }
 
         }
