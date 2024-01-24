@@ -37,7 +37,7 @@
     }
 
     useHead({
-        title : `Garnier BBDO - ${data.value?.data.item.titulo}`,
+        title : `${data.value?.data.item.titulo} - Garnier BBDO`,
         meta: [
             { 
                 name: 'description', 
@@ -53,11 +53,11 @@
             },
             { 
                 name: 'og:title', 
-                content: `Garnier BBDO - ${data.value?.data.item.titulo}`,
+                content: `${data.value?.data.item.titulo} - Garnier BBDO`,
             },
             { 
                 name: 'twitter:title', 
-                content: `Garnier BBDO - ${data.value?.data.item.titulo}`,
+                content: `${data.value?.data.item.titulo} - Garnier BBDO`,
             },
             { 
                 name: 'og:description', 

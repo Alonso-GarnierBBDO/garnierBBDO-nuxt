@@ -14,7 +14,7 @@
     }
 
     useHead({
-        title : 'Garnier BBDO - Agencia de publicidad',
+        title : 'Agencia de publicidad - Garnier BBDO',
         meta: [
             { 
                 name: 'description', 
@@ -30,11 +30,11 @@
             },
             { 
                 name: 'og:title', 
-                content: 'Garnier BBDO - Agencia de publicidad' 
+                content: 'Agencia de publicidad - Garnier BBDO' 
             },
             { 
                 name: 'twitter:title', 
-                content: 'Garnier BBDO - Agencia de publicidad' 
+                content: 'Agencia de publicidad - Garnier BBDO' 
             },
             { 
                 name: 'og:description', 

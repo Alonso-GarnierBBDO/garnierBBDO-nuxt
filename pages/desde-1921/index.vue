@@ -13,7 +13,7 @@
     }
 
     useHead({
-        title : 'Garnier BBDO - Nuestra historia',
+        title : 'Nuestra historia - Garnier BBDO',
         meta: [
             { 
                 name: 'description', 
@@ -29,11 +29,11 @@
             },
             { 
                 name: 'og:title', 
-                content: 'Garnier BBDO - Nuestra historia' 
+                content: 'Nuestra historia - Garnier BBDO' 
             },
             { 
                 name: 'twitter:title', 
-                content: 'Garnier BBDO - Nuestra historia' 
+                content: 'Nuestra historia - Garnier BBDO' 
             },
             { 
                 name: 'og:description', 

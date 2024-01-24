@@ -19,7 +19,7 @@
     }
 
     useHead({
-        title : 'Garnier BBDO - Agencia del año',
+        title : 'Agencia del año - Garnier BBDO',
         meta: [
             { 
                 name: 'description', 
@@ -35,11 +35,11 @@
             },
             { 
                 name: 'og:title', 
-                content: 'Garnier BBDO - Agencia del año' 
+                content: 'Agencia del año - Garnier BBDO' 
             },
             { 
                 name: 'twitter:title', 
-                content: 'Garnier BBDO - Agencia del año' 
+                content: 'Agencia del año - Garnier BBDO' 
             },
             { 
                 name: 'og:description', 

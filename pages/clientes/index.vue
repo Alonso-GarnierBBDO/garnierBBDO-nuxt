@@ -15,7 +15,7 @@
     }
 
     useHead({
-        title : 'Garnier BBDO - Nuestros clientes',
+        title : 'Nuestros clientes - Garnier BBDO',
         meta: [
             { 
                 name: 'description', 
@@ -31,11 +31,11 @@
             },
             { 
                 name: 'og:title', 
-                content: 'Garnier BBDO - Nuestros clientes' 
+                content: 'Nuestros clientes - Garnier BBDO' 
             },
             { 
                 name: 'twitter:title', 
-                content: 'Garnier BBDO - Nuestros clientes' 
+                content: 'Nuestros clientes - Garnier BBDO' 
             },
             { 
                 name: 'og:description', 
