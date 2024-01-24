@@ -81,7 +81,6 @@
 
 
 <script lang="ts">
-    // import postWord from '@/hooks/api';
 
     export default{
         props: {
@@ -310,64 +309,81 @@
                     this.disabledElement = true;
                     this.button = 'Enviando aplicación';
 
+                    try{
 
-                    // const response = await postWord(formData);
-
-                    const response = 200;
-
-                    inputs.forEach( e => {
-                        e.disabled = false;
-                    });
-
-                    this.disabledElement = false;
-                    this.button = 'Enviá tu aplicación';
-
-
-                    if(response == 200){
-
-                        const inputNameFile : HTMLSpanElement = document.querySelector('.nameFile') as HTMLSpanElement;
-                        inputNameFile.innerHTML = '';
-                        this.error = "";
-                        this.openModal = true;
-                        document.body.style.overflow = 'hidden';
-
-                        inputs.forEach( e => {
-
-                            const parentElement : HTMLLabelElement = e.parentElement as HTMLLabelElement;
-                            const childElement : HTMLParagraphElement | null = parentElement.querySelector('p');
-
-                            parentElement.style.marginTop = '0px';
-
-                            if(childElement){
-                                childElement.classList.remove('focus');
-                            }
-
-
-
-                            e.value = '';
-                            
+                        await fetch('https://admin.garnierbbdo.com/api/nuevo-empleo', {
+                            method: 'POST',
+                                body: formData
+                        }).then( response => {
+                            this.loadChange(inputs, response.status);
+                        }).catch( err => {
+                            this.loadChange(inputs, 417);    
                         });
 
-                        this.form.name = '';
-                        this.form.lastName = '';
-                        this.form.email = '';
-                        this.form.linkedin = '';
-                        this.form.portafolio = '';
-
-                        this.alingMenu();
-
-
-
-                    }else{
-                        this.error = "Ocurrió un error al  enviar su solicitud, por favor inténtelo más tarde.";
-                        this.openModal = false;
+                    }catch(err){
+                        this.loadChange(inputs, 417);
                     }
+                    
 
 
                 }else{
                     this.error = 'Algunos items estan incorrectos';
                 }
 
+            },
+
+            loadChange(inputs : NodeListOf<HTMLInputElement>, response : number){
+
+                inputs.forEach( e => {
+                    e.disabled = false;
+                });
+
+                this.disabledElement = false;
+                this.button = 'Enviá tu aplicación';
+
+
+                if(response == 200){
+
+                    const inputNameFile : HTMLSpanElement = document.querySelector('.nameFile') as HTMLSpanElement;
+                    inputNameFile.innerHTML = '';
+                    this.error = "";
+                    this.openModal = true;
+                    document.body.style.overflow = 'hidden';
+
+                    inputs.forEach( e => {
+
+                        const parentElement : HTMLLabelElement = e.parentElement as HTMLLabelElement;
+                        const childElement : HTMLParagraphElement | null = parentElement.querySelector('p');
+
+                        parentElement.style.marginTop = '0px';
+
+                        if(childElement){
+                            childElement.classList.remove('focus');
+                        }
+
+
+
+                        e.value = '';
+                        
+                    });
+
+                    this.form.name = '';
+                    this.form.lastName = '';
+                    this.form.email = '';
+                    this.form.linkedin = '';
+                    this.form.portafolio = '';
+
+                    this.alingMenu();
+
+
+
+                }else if(417){
+                    this.error = "Parece que el servidor no está respondiendo a su solicitud en este momento. Nuestro equipo ya está trabajando para resolver este problema. Le pedimos disculpas por las molestias y le recomendamos que lo intente nuevamente más tarde.";
+                    this.openModal = false;
+                }else{
+                    this.error = "Ocurrió un error al  enviar su solicitud, por favor inténtelo más tarde.";
+                    this.openModal = false;
+                }
             },
 
             changeFIle(e : Event){

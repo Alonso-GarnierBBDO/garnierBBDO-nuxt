@@ -362,10 +362,23 @@
                 column-gap: 20px;
                 cursor: pointer;
 
+                &:hover {
+                    
+                    i,
+                    .nameFile,
+                    strong,
+                    h4{
+                        color: $color-diez;
+                    }
+
+
+                }
+
                 i {
                     font-size: rem(30px);
                     color: $color-diez;
                 }
+
 
                 section{
 

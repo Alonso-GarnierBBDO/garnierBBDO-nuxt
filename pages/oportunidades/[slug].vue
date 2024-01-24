@@ -46,7 +46,7 @@
         meta: [
             { 
                 name: 'description', 
-                content: data.value?.data.items.responsabilidades
+                content: '¡Únete a nuestro equipo! Estamos en busca de talento apasionado y comprometido. Si eres una persona motivada, con habilidades excepcionales y deseas formar parte de nuestro crecimiento, ¡envíanos tu CV ahora! Descubre oportunidades emocionantes y contribuye a un ambiente de trabajo dinámico.'
             },
             { 
                 name: 'og:image', 
@@ -66,11 +66,11 @@
             },
             { 
                 name: 'og:description', 
-                content: data.value?.data.items.responsabilidades
+                content: '¡Únete a nuestro equipo! Estamos en busca de talento apasionado y comprometido. Si eres una persona motivada, con habilidades excepcionales y deseas formar parte de nuestro crecimiento, ¡envíanos tu CV ahora! Descubre oportunidades emocionantes y contribuye a un ambiente de trabajo dinámico.'
             },
             { 
                 name: 'twitter:description', 
-                content: data.value?.data.items.responsabilidades
+                content: '¡Únete a nuestro equipo! Estamos en busca de talento apasionado y comprometido. Si eres una persona motivada, con habilidades excepcionales y deseas formar parte de nuestro crecimiento, ¡envíanos tu CV ahora! Descubre oportunidades emocionantes y contribuye a un ambiente de trabajo dinámico.'
             },
         ],
     });
