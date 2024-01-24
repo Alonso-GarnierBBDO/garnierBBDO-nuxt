@@ -46,7 +46,7 @@
         meta: [
             { 
                 name: 'description', 
-                content: '¡Únete a nuestro equipo! Estamos en busca de talento apasionado y comprometido. Si eres una persona motivada, con habilidades excepcionales y deseas formar parte de nuestro crecimiento, ¡envíanos tu CV ahora! Descubre oportunidades emocionantes y contribuye a un ambiente de trabajo dinámico.'
+                content: `Únete a nuestro equipo dinámico como ${data.value?.data.items.name} y haz avanzar tu carrera en un entorno colaborativo. Estamos buscando un profesional, con habilidades excepcionales para la comunicación y la resolución de problemas.`
             },
             { 
                 name: 'og:image', 
@@ -66,11 +66,11 @@
             },
             { 
                 name: 'og:description', 
-                content: '¡Únete a nuestro equipo! Estamos en busca de talento apasionado y comprometido. Si eres una persona motivada, con habilidades excepcionales y deseas formar parte de nuestro crecimiento, ¡envíanos tu CV ahora! Descubre oportunidades emocionantes y contribuye a un ambiente de trabajo dinámico.'
+                content: `Únete a nuestro equipo dinámico como ${data.value?.data.items.name} y haz avanzar tu carrera en un entorno colaborativo. Estamos buscando un profesional, con habilidades excepcionales para la comunicación y la resolución de problemas.`
             },
             { 
                 name: 'twitter:description', 
-                content: '¡Únete a nuestro equipo! Estamos en busca de talento apasionado y comprometido. Si eres una persona motivada, con habilidades excepcionales y deseas formar parte de nuestro crecimiento, ¡envíanos tu CV ahora! Descubre oportunidades emocionantes y contribuye a un ambiente de trabajo dinámico.'
+                content: `Únete a nuestro equipo dinámico como ${data.value?.data.items.name} y haz avanzar tu carrera en un entorno colaborativo. Estamos buscando un profesional, con habilidades excepcionales para la comunicación y la resolución de problemas.`
             },
         ],
     });

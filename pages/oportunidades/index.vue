@@ -22,7 +22,7 @@
         meta: [
             { 
                 name: 'description', 
-                content: 'Somos agencia de publicidad costarricense, fundada por Alberto H. Garnier en 1921, y parte del BBDO Worldwide Network desde 1985. A Costa Rican Advertising Agency, founded by Alberto H. Garnier in 1921, and part of the BBDO Worldwide Network since 1985.' 
+                content: '¡Únete a nuestro equipo! Estamos en busca de talento apasionado y comprometido. Si eres una persona motivada, con habilidades excepcionales y deseas formar parte de nuestro crecimiento, ¡envíanos tu CV ahora! Descubre oportunidades emocionantes y contribuye a un ambiente de trabajo dinámico.' 
             },
             { 
                 name: 'og:image', 
@@ -42,11 +42,11 @@
             },
             { 
                 name: 'og:description', 
-                content: 'Somos agencia de publicidad costarricense, fundada por Alberto H. Garnier en 1921, y parte del BBDO Worldwide Network desde 1985. A Costa Rican Advertising Agency, founded by Alberto H. Garnier in 1921, and part of the BBDO Worldwide Network since 1985.' 
+                content: '¡Únete a nuestro equipo! Estamos en busca de talento apasionado y comprometido. Si eres una persona motivada, con habilidades excepcionales y deseas formar parte de nuestro crecimiento, ¡envíanos tu CV ahora! Descubre oportunidades emocionantes y contribuye a un ambiente de trabajo dinámico.' 
             },
             { 
                 name: 'twitter:description', 
-                content: 'Somos agencia de publicidad costarricense, fundada por Alberto H. Garnier en 1921, y parte del BBDO Worldwide Network desde 1985. A Costa Rican Advertising Agency, founded by Alberto H. Garnier in 1921, and part of the BBDO Worldwide Network since 1985.' 
+                content: '¡Únete a nuestro equipo! Estamos en busca de talento apasionado y comprometido. Si eres una persona motivada, con habilidades excepcionales y deseas formar parte de nuestro crecimiento, ¡envíanos tu CV ahora! Descubre oportunidades emocionantes y contribuye a un ambiente de trabajo dinámico.' 
             },
         ],
     });
