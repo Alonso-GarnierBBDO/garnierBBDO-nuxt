@@ -61,12 +61,14 @@
 <template>
 
     <div class="page desde-1921">
-        <section class="image">
-            <NuxtImg :src="data?.data.items.photo" :alt="data?.data.items.title" :title="data?.data.items.title"/>
-        </section>
-        <section class="content">
-            <h1 :title="data?.data.items.title">{{ data?.data.items.title }}</h1>
-            <div class="description" v-html="data?.data.items.description"></div>
+        <section>
+            <section class="image">
+                <NuxtImg :src="data?.data.items.photo" :alt="data?.data.items.title" :title="data?.data.items.title"/>
+            </section>
+            <section class="content">
+                <h1 :title="data?.data.items.title">{{ data?.data.items.title }}</h1>
+                <div class="description" v-html="data?.data.items.description"></div>
+            </section>
         </section>
     </div> 
 

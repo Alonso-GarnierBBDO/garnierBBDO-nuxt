@@ -11,6 +11,7 @@
         align-items: center;
         justify-content: center;
         grid-gap: 50px;
+        width: 100%;
 
         @include bp(mobileBIG){
             grid-template-columns: repeat(3, 1fr);
@@ -51,7 +52,7 @@
                 }
 
                 @include bp(escritorio){
-                    width: 50%;
+                    width: 65%;
                 }
 
                 img  {

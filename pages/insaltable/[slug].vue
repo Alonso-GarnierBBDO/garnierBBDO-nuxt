@@ -115,20 +115,22 @@
             <PortafolioAppVideo class="video" :video="data?.data.item.video"/>
         </ClientOnly>
         <section class="page content" id="content">
-            <div class="header">
-                <section class="title">
-                    <h1 :title="data?.data.item.titulo">{{ data?.data.item.titulo }} </h1>
-                    <a title="Ver más" href="#content">
-                        <BootstrapIcon name="arrow-down" />
-                    </a>
+            <section>
+                <div class="header">
+                    <section class="title">
+                        <h1 :title="data?.data.item.titulo">{{ data?.data.item.titulo }} </h1>
+                        <a title="Ver más" href="#content">
+                            <BootstrapIcon name="arrow-down" />
+                        </a>
+                    </section>
+                    <section class="description">
+                        <p>{{ data?.data.item.description }}</p>
+                    </section>
+                </div>
+                <section class="contenido" v-html="data?.data.item.content"></section>
+                <section class="images">
+                    <NuxtPicture v-for="(item, key) in data?.data.item.images" :key="key" format="avif,webp" :src="item" :alt="item"/>
                 </section>
-                <section class="description">
-                    <p>{{ data?.data.item.description }}</p>
-                </section>
-            </div>
-            <section class="contenido" v-html="data?.data.item.content"></section>
-            <section class="images">
-                <NuxtPicture v-for="(item, key) in data?.data.item.images" :key="key" format="avif,webp" :src="item" :alt="item"/>
             </section>
         </section>
     </div>

@@ -44,11 +44,11 @@
         }
 
         @include bp(laptop){
-            height: 350px;
+            height: 400px;
         }
 
         @include bp(escritorio){
-            height: 400px;
+            height: 600px;
         }
 
         img{
