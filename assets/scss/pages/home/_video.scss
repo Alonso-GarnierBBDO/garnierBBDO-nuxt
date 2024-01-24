@@ -1,6 +1,6 @@
 .video_home{
 
-    height: calc(100vh - 50px);
+    height: calc(100dvh - 50px);
 
     .video-js {
 
@@ -15,7 +15,7 @@
         @include bp(laptop){
             font-size: rem(13px);
             font-family: $font-bold;
-            height: calc(100vh - 50px);
+            height: calc(100dvh - 50px);
         }
 
         &:hover {

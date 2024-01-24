@@ -55,9 +55,9 @@
 
             height_video(){
 
-                const element : HTMLElement = this.$refs.videoHome as HTMLElement;
+                /*const element : HTMLElement = this.$refs.videoHome as HTMLElement;
                 const heightElement : number = window.innerHeight; 
-                element.style.height = `${heightElement - 50}px`;
+                element.style.height = `${heightElement - 50}px`;*/
 
             }
 
