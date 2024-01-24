@@ -12,6 +12,25 @@
     src: url(../fonts/noway/noway-bold-webfont.ttf);
 }
 
+// Din
+
+@font-face {
+    font-family: din_bold;
+    src: url(../fonts/din/din-bold.ttf);
+}
+
+@font-face {
+    font-family: din_regular;
+    src: url(../fonts/din/din.ttf);
+}
+
+// Go
+
+@font-face {
+    font-family: go_bold;
+    src: url(../fonts/gobold/gobold_regular.otf);
+}
+
 
 // Animation
 
@@ -65,6 +84,9 @@
 // Fonsts vars
 $font-regular: noway_regular_web;
 $font-bold: noway_bold_web;
+$font-din-regular: din_regular;
+$font-din-bold: din_bold;
+$font-go-bold: go_bold;
 
 // Color vars
 $color-principal: #e91d2d;
@@ -82,3 +104,5 @@ $color-diez: #acacac;
 $color-once: #4cabc6;
 $color-doce: rgba(255, 255, 255, 0.383);
 $color-trece: #1B4465;
+$color-catorce: #ffffff21;
+$color-quince: rgb(234, 234, 234);
