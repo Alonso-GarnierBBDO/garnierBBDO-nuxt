@@ -47,12 +47,36 @@ import VideoJS from 'video.js';
                     ]
                 });
 
+                this.screenElement();
+
             },
+
+            screenElement(){
+                
+                const titleComponent : HTMLElement | null = window.innerWidth <= 550 ? document.querySelector('.portafolio-individual .page .header .title') : document.querySelector('.portafolio-individual .page .header');
+                const videoComponent : HTMLElement | null = document.querySelector('.video_portafolio');
+
+                if(titleComponent && videoComponent){
+
+                    const titleHeight = titleComponent.clientHeight + 60;
+                    const screenHeight = window.innerHeight;
+
+                    videoComponent.style.height = `${ screenHeight - titleHeight}px`;
+
+
+                }
+            }
 
         },
         mounted() {
 
             this.video_item();
+
+            window.onresize = () => {
+
+                this.screenElement();
+
+            }
 
         },
 

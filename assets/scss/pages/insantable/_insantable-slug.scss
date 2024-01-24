@@ -2,7 +2,7 @@
 
     .video{
 
-        height: calc(90vh - 30px);
+        height: calc(90dvh - 30px);
 
         @include bp(mobileBIG){
             height: calc(85vh - 30px);
