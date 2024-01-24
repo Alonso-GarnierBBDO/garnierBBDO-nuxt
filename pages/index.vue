@@ -83,6 +83,7 @@
 </script>
 
 <template>
+    <h1 class="title_home">Agencia de publicidad - Garnier BBDO</h1>
     <div>
         <ClientOnly>
             <HomeAppModal/>
