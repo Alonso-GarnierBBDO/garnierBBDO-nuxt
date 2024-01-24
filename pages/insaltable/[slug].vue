@@ -111,7 +111,9 @@
 
 <template>
     <div class="portafolio-individual" v-if="data?.data.item">
-        <PortafolioAppVideo class="video" :video="data?.data.item.video"/>
+        <ClientOnly>
+            <PortafolioAppVideo class="video" :video="data?.data.item.video"/>
+        </ClientOnly>
         <section class="page content" id="content">
             <div class="header">
                 <section class="title">
