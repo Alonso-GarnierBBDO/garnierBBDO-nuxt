@@ -68,7 +68,9 @@
 
         <section class="logos">
             <article v-for="(value, key) in data?.data.items" :key="key" :title="value.name">
-                <NuxtPicture :src="value.image" sizes="120px" :alt="value.name"/>
+                <picture>
+                    <img :src="value.image" :alt="value.name">
+                </picture>
                 <span :title="`Desde ${value.year}`">Desde {{ value.year }} </span>
             </article>
         </section>

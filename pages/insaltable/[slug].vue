@@ -129,7 +129,9 @@
                 </div>
                 <section class="contenido" v-html="data?.data.item.content"></section>
                 <section class="images">
-                    <NuxtPicture v-for="(item, key) in data?.data.item.images" :key="key" format="avif,webp" :src="item" :alt="item"/>
+                    <section class="img" v-for="(item, key) in data?.data.item.images" :key="key">
+                        <img :src="item" :alt="item"/>
+                    </section>
                 </section>
             </section>
         </section>

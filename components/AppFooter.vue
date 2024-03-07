@@ -58,16 +58,16 @@
             </div>
             <section class="logos">
                 <a title="Esencial Costa Rica" href="https://www.esencialcostarica.com" target="_blank">
-                    <NuxtImg src="/img/esencial.webp" alt="Esencial Costa Rica" sizes="70px" />
+                    <img src="/img/esencial.webp" alt="Esencial Costa Rica"/>
                 </a>
                 <a title="Comunidad Costa Rica" href="https://comunidad.cr" target="_blank">
-                    <NuxtImg src="/img/comunidad.webp" sizes="70px" alt="Comunidad Costa Rica"/>
+                    <img src="/img/comunidad.webp" alt="Comunidad Costa Rica"/>
                 </a>
                 <a title="Declaración de San Jose">
-                    <NuxtImg src="/img/declaracion.webp" sizes="70px" alt="Declaración de San Jose"/>
+                    <img src="/img/declaracion.webp" alt="Declaración de San Jose"/>
                 </a>
                 <a title="Bandera Azul">
-                    <NuxtImg src="/img/azul.webp" sizes="70px" alt="Bandera Azul"/>
+                    <img src="/img/azul.webp"  alt="Bandera Azul"/>
                 </a>
             </section>
             <section class="politicas">
