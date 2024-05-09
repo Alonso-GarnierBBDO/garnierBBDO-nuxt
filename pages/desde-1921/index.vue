@@ -63,7 +63,7 @@
     <div class="page desde-1921">
         <section>
             <section class="image">
-                <img :src="data?.data.items.photo" :alt="data?.data.items.title" :title="data?.data.items.title"/>
+                <img :src="data?.data.items.photo" :alt="data?.data.items.title" :title="data?.data.items.title" loading="lazy"/>
             </section>
             <section class="content">
                 <h1 :title="data?.data.items.title">{{ data?.data.items.title }}</h1>

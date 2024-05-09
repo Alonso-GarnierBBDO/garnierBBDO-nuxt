@@ -130,7 +130,7 @@
                 <section class="contenido" v-html="data?.data.item.content"></section>
                 <section class="images">
                     <section class="img" v-for="(item, key) in data?.data.item.images" :key="key">
-                        <img :src="item" :alt="item"/>
+                        <img :src="item" :alt="item" loading="lazy"/>
                     </section>
                 </section>
             </section>

@@ -65,7 +65,7 @@
         </form>
         <section v-if="openModal" class="modal" v-on:click="showModal()">
             <section class="content" v-on:click="(e) => e.stopPropagation()">
-                <img src="../../assets/img/volcan_logo.svg" class="logo_volcan" alt="Logo del premio volcan">
+                <img src="../../assets/img/volcan_logo.svg" class="logo_volcan" alt="Logo del premio volcan" loading="lazy">
                 <button class="close" v-on:click="showModal()">
                     <BootstrapIcon class="arrow" name="x-lg"/>
                 </button>

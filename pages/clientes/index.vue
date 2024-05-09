@@ -69,7 +69,7 @@
         <section class="logos">
             <article v-for="(value, key) in data?.data.items" :key="key" :title="value.name">
                 <picture>
-                    <img :src="value.image" :alt="value.name">
+                    <img :src="value.image" :alt="value.name" loading="lazy">
                 </picture>
                 <span :title="`Desde ${value.year}`">Desde {{ value.year }} </span>
             </article>

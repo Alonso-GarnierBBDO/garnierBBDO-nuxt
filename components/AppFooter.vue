@@ -53,21 +53,21 @@
                     </a>
                 </section>
                 <section class="location">
-                    <p title="Vía Lindora, Edificio BLP, piso 2. Pozos 10903, San José, Costa Rica">Vía Lindora, Edificio BLP, piso 2. Pozos 10903, San José, Costa Rica</p>
+                    <p title="Vía Lindora, Edificio BLP, piso 2. Pozos 10903, San José, Costa Rica">Vía Lindora, Edificio BLP, piso 4. Pozos 10903, San José, Costa Rica</p>
                 </section>
             </div>
             <section class="logos">
                 <a title="Esencial Costa Rica" href="https://www.esencialcostarica.com" target="_blank">
-                    <img src="/img/esencial.webp" alt="Esencial Costa Rica"/>
+                    <img src="/img/esencial.webp" alt="Esencial Costa Rica" width="50" height="50" loading="lazy"/>
                 </a>
                 <a title="Comunidad Costa Rica" href="https://comunidad.cr" target="_blank">
-                    <img src="/img/comunidad.webp" alt="Comunidad Costa Rica"/>
+                    <img src="/img/comunidad.webp" alt="Comunidad Costa Rica" width="50" height="50" loading="lazy"/>
                 </a>
                 <a title="Declaración de San Jose">
-                    <img src="/img/declaracion.webp" alt="Declaración de San Jose"/>
+                    <img src="/img/declaracion.webp" alt="Declaración de San Jose" width="50" height="50" loading="lazy"/>
                 </a>
                 <a title="Bandera Azul">
-                    <img src="/img/azul.webp"  alt="Bandera Azul"/>
+                    <img src="/img/azul.webp"  alt="Bandera Azul" width="50" height="50"/>
                 </a>
             </section>
             <section class="politicas">

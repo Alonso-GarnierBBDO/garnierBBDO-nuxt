@@ -25,11 +25,22 @@
         },
         mounted(){
 
-            const showModal = window.localStorage.getItem('modal');
-            if(!showModal){
-                this.view = true;
-                document.body.style.overflow = 'hidden';
-            }
+            /**
+             * Configuracion anterior
+             */
+
+            // const showModal = window.localStorage.getItem('modal');
+            // if(!showModal){
+            //     this.view = true;
+            //     document.body.style.overflow = 'hidden';
+            // }
+
+            /**
+             * Configuracion actual
+             */
+
+             this.view = true;
+            document.body.style.overflow = 'hidden';
 
         }
     }
@@ -44,14 +55,14 @@
                     <i class="bi bi-x-lg"></i>
                 </button>
                 <section class="content_modal">
-                    <h2>Agencia del Año Volcán 2023</h2>
+                    <h2 title="Agencia del año en Effie y Volcanes">Agencia del año en Effie y Volcanes</h2>
                     <div class="subcontent">
                         <p>
                         3 Años consecutivos ganando <strong> Oro en Effie Latam </strong> • Única Agencia de CR Ganadora en <strong> Effie Latam 2023</strong> • Finalistas en Cannes • Ganadores en el Ojo de Iberoamérica
                         </p>
                     </div>
                     <div class="image">
-                        <img src="../../assets/img/volcan_logo.svg" alt="Logo volcan">
+                        <!-- <img src="../../assets/img/volcan_logo.svg" alt="Logo volcan"> -->
                     </div>
                 </section>
             </section>

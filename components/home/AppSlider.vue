@@ -72,7 +72,7 @@
             <SwiperSlide v-for="(item, key) in items" :key="key" class="trabajo_slider">
                 <section class="item">
                     <NuxtLink :title="item.name" :to="`/insaltable/${item.slug}`">
-                        <img :src="item.image" :alt="item.name"/>
+                        <img :src="item.image" :alt="item.name" width="500" height="500" loading="lazy"/>
                         <section>
                             <div>
                                 <h2 :title="item.name">{{ item.name }}</h2>
