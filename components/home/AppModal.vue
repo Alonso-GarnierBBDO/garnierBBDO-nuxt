@@ -55,14 +55,17 @@
                     <i class="bi bi-x-lg"></i>
                 </button>
                 <section class="content_modal">
-                    <h2 title="Agencia del año en Effie y Volcanes">Agencia del año en Effie y Volcanes</h2>
-                    <div class="subcontent">
-                        <p>
-                        3 Años consecutivos ganando <strong> Oro en Effie Latam </strong> • Única Agencia de CR Ganadora en <strong> Effie Latam 2023</strong> • Finalistas en Cannes • Ganadores en el Ojo de Iberoamérica
-                        </p>
-                    </div>
                     <div class="image">
-                        <!-- <img src="../../assets/img/volcan_logo.svg" alt="Logo volcan"> -->
+                        <img src="../../assets/img/volcan_logo.svg" alt="Logo volcan">
+                    </div>
+                    <div class="content">
+                        <h2 title="Agencia del año en Effie y Volcanes">Agencia del Año Volcán 2024</h2>
+                        <h3>por segundo año consecutivo</h3>
+                        <!-- <div class="subcontent">
+                            <p>
+                            3 Años consecutivos ganando <strong> Oro en Effie Latam </strong> • Única Agencia de CR Ganadora en <strong> Effie Latam 2023</strong> • Finalistas en Cannes • Ganadores en el Ojo de Iberoamérica
+                            </p>
+                        </div> -->
                     </div>
                 </section>
             </section>

@@ -57,7 +57,10 @@
                 </section>
             </div>
             <section class="logos">
-                <a title="Esencial Costa Rica" href="https://www.esencialcostarica.com" target="_blank">
+                <a title="Empresa certificada" target="_blank" class="empresa_certificada">
+                    <img src="/img/empresa_certificada.webp" alt="Empresa certificada" width="50" height="50" loading="lazy"/>
+                </a>
+                <a title="Esencial Costa Rica" href="https://www.esencialcostarica.com" target="_blank" class="esencial">
                     <img src="/img/esencial.webp" alt="Esencial Costa Rica" width="50" height="50" loading="lazy"/>
                 </a>
                 <a title="Comunidad Costa Rica" href="https://comunidad.cr" target="_blank">
